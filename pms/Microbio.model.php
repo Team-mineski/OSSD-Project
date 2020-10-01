@@ -23,16 +23,16 @@ include_once "MicrobioRequestTable.model.php";
      $this->table_path="microbio_table";
      $this->parent_database=$parent_database;
      $this->regNo = $regNo;
-     $this->lab_no = $_POST["labno"];
-     $this->BHT_no = $_POST["clinicno"];
-     $this->specimen_test = $_POST["test"];
-     $this->probable_diagnosis = $_POST["diagnosis"];
-     $this->clinic_detail = $_POST["clinic_detail"];
-     $this->prior_antibiotic = $_POST["prior-anti"];
-     $this->antibiotic_given = $_POST["antibiotic"];
-     $this->sig_MO = $_POST["sigmo"];
-     $this->name_MO = $_POST["namemo"];
-     $this->designation = $_POST["designation"];
+     $this->lab_no = htmlentities($_POST["labno"]);
+     $this->BHT_no = htmlentities($_POST["clinicno"]);
+     $this->specimen_test = htmlentities($_POST["test"]);
+     $this->probable_diagnosis =htmlentities( $_POST["diagnosis"]);
+     $this->clinic_detail = htmlentities($_POST["clinic_detail"]);
+     $this->prior_antibiotic = htmlentities($_POST["prior-anti"]);
+     $this->antibiotic_given = htmlentities($_POST["antibiotic"]);
+     $this->sig_MO = htmlentities($_POST["sigmo"]);
+     $this->name_MO = htmlentities($_POST["namemo"]);
+     $this->designation = htmlentities($_POST["designation"]);
      $this->completed_date = date('Y-m-d');
    }
 

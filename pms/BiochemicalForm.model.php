@@ -29,22 +29,23 @@ class BiochemicalForm{
         $this->table_path="biochemical_table";
         $this->parent_database=$parent_database;
         $this->regNo=$regNo;
-        $this->lab_ref_no=$_POST['refnum'];
+        $this->lab_ref_no=htmlentities($_POST['refnum']);
         $this->bht_no=$bht;
-        $this->fasting_status=$_POST['inlineCheckbox1'];
-        $this->clinical_history=$_POST['clinical_history'];
-        $this->serum=implode(",",$_POST['Serum']);
-        $this->plasma_glu=implode(',',$_POST['Plasma']);
-        $this->csf=implode(',',$_POST['CSF']);
-        $this->officer=$_POST['offname'];
-        $this->date_request=$_POST['Date'];
+        $this->fasting_status=htmlentities($_POST['inlineCheckbox1']);
+        $this->clinical_history=htmlentities($_POST['clinical_history']);
+        $this->serum=implode(",",htmlentities($_POST['Serum']));
+        $this->plasma_glu=implode(',',htmlentities($_POST['Plasma']));
+        $this->csf=implode(',',htmlentities($_POST['CSF']));
+        $this->officer=htmlentities($_POST['offname']);
+        $this->date_request=htmlentities($_POST['Date']);
         $this->date = $date;
-        $this->date_filled=$_POST['Date2'];
-        $this->time_filled=$_POST['time1'];
-        $this->nursing_officer=$_POST['offname2'];
-        $this->date_lab_rec=$_POST['datefinal'];
-        $this->time_lab_rec=$_POST['timefinal'];
-        $this->last_check=implode(',',$_POST['last_checkbox']);
+        
+        $this->date_filled=htmlentities($_POST['Date2']);
+        $this->time_filled=htmlentities($_POST['time1']);
+        $this->nursing_officer=htmlentities($_POST['offname2']);
+        $this->date_lab_rec=htmlentities($_POST['datefinal']);
+        $this->time_lab_rec=htmlentities($_POST['timefinal']);
+        $this->last_check=implode(',',htmlentities($_POST['last_checkbox']));
 }
 
     public function writeToTable(){

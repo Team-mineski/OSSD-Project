@@ -34,24 +34,24 @@ class SpecimenExam {
     $this->parent_database = $parent_database;
     $this->regNo = $regNo;
     $this->date=$date;
-    $this->serial_no = $_POST["serialno"];
-    $this->matandexams = $_POST["exams"];
-    $this->coldate = $_POST["coldate"];
-    $this->coltime = $_POST["coltime"];
-    $this->sig_MO = $_POST["signmo"];
-    $this->institutionNo = $_POST["insno"];
-    $this->counterdate = $_POST["cdate"];
-    $this->countertime = $_POST["ctime"];
-    $this->counterreceived = $_POST["cReceived"];
-    $this->remarks = $_POST["remark"];
-    $this->lab_no = $_POST["labno"];
-    $this->labdate = $_POST["labdate"];
-    $this->labreceived = $_POST["Received"];
-    $this->labnotice = $_POST["labnote"];
-    $this->labsig = $_POST["labsign"];
-    $this->report = $_POST["repspec"];
-    $this->reportcheck = $_POST["repcheck"];
-    $this->sentdate = $_POST["senton"];
+    $this->serial_no = htmlentities($_POST["serialno"]);
+    $this->matandexams = htmlentities($_POST["exams"]);
+    $this->coldate =htmlentities( $_POST["coldate"]);
+    $this->coltime = htmlentities($_POST["coltime"]);
+    $this->sig_MO = htmlentities($_POST["signmo"]);
+    $this->institutionNo = htmlentities($_POST["insno"]);
+    $this->counterdate = htmlentities($_POST["cdate"]);
+    $this->countertime = htmlentities($_POST["ctime"]);
+    $this->counterreceived = htmlentities($_POST["cReceived"]);
+    $this->remarks = htmlentities($_POST["remark"]);
+    $this->lab_no = htmlentities($_POST["labno"]);
+    $this->labdate = htmlentities($_POST["labdate"]);
+    $this->labreceived = ($_POST["Received"]);
+    $this->labnotice =htmlentities( $_POST["labnote"]);
+    $this->labsig = htmlentities($_POST["labsign"]);
+    $this->report = htmlentities($_POST["repspec"]);
+    $this->reportcheck = htmlentities($_POST["repcheck"]);
+    $this->sentdate = htmlentities($_POST["senton"]);
 
   }
 

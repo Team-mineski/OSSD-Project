@@ -23,15 +23,15 @@ class ECG{
     $this->table_path="ecg_table";
     $this->parent_database=$parent_database;
     $this->regNo = $regNo;
-    $this->BHT_no =$_POST["bht"];
-    $this->surgeon =$_POST["surgeon"];
-    $this->standard_lead =$_POST["sleads"];
-    $this->other_lead =$_POST["anyleads"];
-    $this->sigMO =$_POST["sigmo"];
-    $this->reg_no =$_POST["regno"];
-    $this->remarks =$_POST["remark"];
-    $this->finishedDate =$_POST["dates"];
-    $this->sigCardio =$_POST["signcardio"];
+    $this->BHT_no =htmlentities($_POST["bht"]);
+    $this->surgeon =htmlentities($_POST["surgeon"]);
+    $this->standard_lead =htmlentities($_POST["sleads"]);
+    $this->other_lead =htmlentities($_POST["anyleads"]);
+    $this->sigMO =htmlentities($_POST["sigmo"]);
+    $this->reg_no =htmlentities($_POST["regno"]);
+    $this->remarks =htmlentities($_POST["remark"]);
+    $this->finishedDate =htmlentities($_POST["dates"]);
+    $this->sigCardio =htmlentities($_POST["signcardio"]);
   }
 
 
