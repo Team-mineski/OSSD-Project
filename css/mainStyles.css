@@ -1,0 +1,203 @@
+
+.header {
+  padding: 30px;
+  text-align: center;
+  /* background : #297578; */
+}
+.mainHeading{
+  color: #FFFFFF;
+  font-size: 25px;
+
+}
+.mainSubHeading{
+  color: #FEA736;
+  font-size: 20px;
+  
+
+
+}
+
+.mainbody{
+  background-color: #FEA736;
+  margin-top: auto;
+  margin-bottom: auto;
+ 
+
+  /* background: url('add-user.png');   */
+
+}
+.mainbodyAdmin{
+  background-color: #FEA736;
+  margin-top: 170px;
+  margin-bottom: auto;
+ 
+
+  /* background: url('add-user.png');   */
+
+}
+
+@media (max-width:767px){
+  .mainbodyAdmin{
+    background-color: #FEA736;
+    margin-top: 300px;
+    margin-bottom: auto;
+  }
+}
+.optionText{
+  font-size: 20px ;
+  color: #FFFFFF;
+  font-weight: bold;
+  text-align: center;
+}
+
+table.table-bordered{
+  border:1px solid #297578;
+  margin-top:20px;
+}
+table.table-bordered > thead > tr > th{
+  border:1px solid #297578;
+}
+table.table-bordered > tbody > tr > td{
+  border:1px solid #297578;
+}
+.newhr{
+  border-top: 2px solid #297578;
+}
+
+/* content page */
+.roundbtn{
+  border-radius: 50%;
+  background-color: #FEA736;
+  height: 140.5px;
+  width: 140.5px;
+  cursor: pointer;
+  border: 20px solid #FFFFFF;
+  
+  
+}
+
+.iconsize{
+  
+  width: 70px;
+  background-position-y: center;
+  background-position-x: center;
+
+
+}
+
+/* patient form */
+.textStyle{
+  color:#297578 ;
+  font-weight:600;
+}
+.boxstyles{
+  background-color:white ;
+  opacity: 55%;
+  border: 1px solid#FEA736;
+  color: black;
+  font-weight: 500;
+}
+
+/* searching page */
+.mainText{
+  color: white;
+  font-weight: bold;
+}
+
+.roundsearchbtn{
+  border-radius: 50%;
+  background-color:  #FEA736;
+  border: 10px solid #FEA736;
+  
+}
+
+.searchicon{
+  width: 50px;
+  background-position-y: center;
+  background-position-x: center;
+  cursor: pointer;  
+
+}
+
+.bigsearch{
+  width: 380px;
+}
+.btn{
+  font-weight: 600;
+  white-space: normal;
+}
+.btn-outline-success {
+  color:#297578;
+  background-color: white;
+  background-image: none;
+  border-color: #297578;;
+}
+.btn-outline-success:hover{
+  background-color: #297578 !important;
+}
+/* input group style register page */
+.grpstyle{
+  background: white url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e")
+   no-repeat right .75rem center/8px 10px;
+  opacity: 55%;
+
+}
+.deletecon{
+  width: 90%;
+  padding:20px ;
+  margin-top: 30px;
+  border-radius:20px;
+  background-color: #DC3545;
+}
+
+.warningIcon{
+
+  width: 100px;
+
+}
+
+.deletebtn{
+  color:#DC3545;
+  background-color: white;
+  background-image: none;
+  border-color: white;
+
+}
+.deletebtn:hover{
+  border-color: white;
+}
+
+.attentionText{
+  color: white;
+
+}
+.innercol{
+    background-color:white ;
+    opacity: 55%;
+    color:#DC3545 !important;
+}
+/* this is for the delete page error popups */
+.deletepagepopups{
+    color: white;
+    background-color: #DC3545;
+    border-color: #DC3545;
+}
+
+.deletepagesuceespopup{
+    color: white;
+    background-color: #297578;
+    border-color: #297578;
+}
+
+.form-control:disabled, .form-control[readonly] {
+  background-color:white ;
+  opacity: 56%;
+  color:black;
+  font-weight: 500;
+}
+
+@media print{
+  .printvisible *{
+    visibility: hidden;
+  }
+}

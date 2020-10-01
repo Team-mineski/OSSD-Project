@@ -1,0 +1,97 @@
+
+.navbar
+{
+  padding: 30px;
+  height: 2;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+  background-color:  #297578 !important;
+  margin-bottom:20px !important ;
+
+  
+}
+.navbar-toggler-icon {
+  background-image: url('https://mdbootstrap.com/img/svg/hamburger7.svg?color=FEA736') !important;
+  }
+.navbar-brand img
+{
+  height: 5rem;
+}
+
+/*--- gap among nav items --*/
+.navbar-nav li
+{
+  padding-right: 1.0rem;
+}
+nav .navbar-nav li a{
+  color: white ;
+  }
+
+/*--- green shade ---*/
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover
+{
+  color:#FEA736;
+}
+
+
+.dropdown-item {
+
+  display: block;
+  width: 100%;
+  padding:5px;
+  clear: both;
+  font-weight: 500;
+  color: #297578 !important;
+  text-align: inherit;
+  white-space: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.loginContainer{
+  padding:20px ;
+  border-radius:20px;
+  width: 300px;
+  background-color: white;
+}
+.textboxStyle{
+  background-color: #FEA736;
+  color: #297578 ;
+  border-radius: 6px;
+  /* font-weight: bold; */
+
+}
+/* input[type=text] , input[type=password] {
+  
+} */
+.remtext{
+  color:#297578 ;
+  /* font-size: 18px; */
+  font-weight:600;
+}
+.btnlogin{
+  font-weight: 600;
+  color: #fff;
+  background-color: #297578 ;
+  border-color: #297578 ;
+  width: 250px;
+  
+}
+
+.biglogin{
+  width: 400px;
+  
+}
+
+/* welcom heading */
+
+.welcomeHeading{
+  color: white;
+  font-weight: 600;
+  text-shadow: 5px black ;
+}
+
+

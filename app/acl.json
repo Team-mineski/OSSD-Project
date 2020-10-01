@@ -1,0 +1,104 @@
+{
+  "Guest": {
+    "denied": {},
+    "Home": [
+      "*"
+    ],
+    "Register": [
+      "login"
+    ],
+    "Restricted": [
+      "*"
+    ]
+  },
+  "LoggedIn": {
+    "denied": {
+      "Register": [
+        "login"
+      ]
+    },
+    "Home": [
+      "*"
+    ],
+    "Register": [
+      "logout"
+    ],
+    "Restricted": [
+      "*"
+    ],
+    "Redirect": [
+      "*"
+    ]
+  },
+  "Doctor": {
+    "denied": {
+      "Register": [
+        "login",
+        "register"
+      ]
+    },
+    "NewPatient": [
+      "*"
+    ],
+    "Register": [
+      "logout"
+    ],
+    "Tools": [
+      "AddNewPatient",
+      "Update",
+      "existingPatient",
+      "dischargedPatient"
+    ]
+  },
+  "Admin": {
+    "denied": {},
+    "Register": [
+      "register"
+    ],
+    "Tools": [
+      "delete"
+    ]
+  },
+  "Lab Assistant": {
+    "denied": {},
+    "Tools": [
+      "first",
+      "inbox"
+    ]
+  },
+  "ecg_lab": {
+    "denied": {},
+    "Tools": [
+      "first",
+      "inbox"
+    ]
+  },
+  "microbio_lab": {
+    "denied": {},
+    "Tools": [
+      "first",
+      "inbox"
+    ]
+  },
+  "biochemical_lab": {
+    "denied": {},
+    "Tools": [
+      "first",
+      "inbox"
+    ]
+  },
+  "specimen_exam_lab": {
+    "denied": {},
+    "Tools": [
+      "first",
+      "inbox"
+    ]
+  },
+  "xray_lab": {
+    "denied": {},
+    "Tools": [
+      "first",
+      "inbox"
+    ]
+  }
+}
