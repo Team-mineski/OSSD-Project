@@ -9,13 +9,11 @@ if (!(isset($_SESSION["username"]))){
 $patient = unserialize($_SESSION['patient']);
 $test_date=$_SESSION['request_date'];
 
-
-
  ?>
 <html lang="en" dir="ltr">
 	<head>
 		<meta charset="utf-8">
-        <title>microbiology request</title>
+        <title>Microbiology Request Form</title>
         <link rel = "stylesheet" href = "../bootstrap/css/bootstrap.min.css" integrity="" crossorigin="anonymous">
          <link rel="stylesheet" href="../style.css">
        <link rel="stylesheet" href="../css/labReportStyles.css">
@@ -39,7 +37,7 @@ $test_date=$_SESSION['request_date'];
                             <td >
                                 <div class="form-group w-75" >
                                     <label for="Date">Date of receipt</label>
-                                    <input type="date" name="date_of_receipt" id="Date" class="form-control form-control-sm">
+                                    <input type="date" name="date_of_receipt" id="Date" value = "<?php echo $test_date?>" class="form-control form-control-sm">
                                 </div>
                             </td>
                             <td>
@@ -60,7 +58,7 @@ $test_date=$_SESSION['request_date'];
 
                 <div class="form-group w-50 ">
                     <label for="name"> Name:</label>
-                    <input type="text" name="name" id="name" class="form-control form-control-sm" value= <?php  echo $patient->getName(); ?> readonly >
+                    <input type="text" name="name" id="name" class="form-control form-control-sm" value=" <?php  echo $patient->getName(); ?>" readonly >
 
                 </div>
                 <div class="row">
@@ -68,14 +66,14 @@ $test_date=$_SESSION['request_date'];
                         <div class="form-group w-25">
 
                             <label for="age"> Age:</label>
-                            <input type="number" name="age" id="age" class="form-control form-control-sm " selected value= <?php  echo $patient->getAge(); ?> readonly >
+                            <input type="text" name="age" id="age" class="form-control form-control-sm " selected value= "<?php  echo $patient->getAge(); ?>" readonly >
 
                         </div>
                     </div>
                     <div class="col">
                         <div class="form-group w-25">
                             <label for="sex">  Sex:</label>
-                            <select name="gender" id="sex" class="form-control form-control-sm" value= <?php  echo $patient->getGender(); ?> disabled = "true" >
+                            <select name="gender" id="sex" class="form-control form-control-sm" value=" <?php  echo $patient->getGender(); ?>" disabled = "true" >
                                 <option value="Male"> <?php  echo $patient->getGender(); ?></option>
 
                             </select>
@@ -89,14 +87,14 @@ $test_date=$_SESSION['request_date'];
                     <div class="col">
                         <div class="form-group w-50">
                             <label for="ward"> Ward:</label>
-                            <input type="text" name="ward" id="ward" class="form-control form-control-sm" value = 19 readonly>
+                            <input type="text" name="ward" id="ward" class="form-control form-control-sm" value = "19" readonly>
 
                         </div>
                     </div>
                     <div class="col">
                         <div class="form-group w-50">
                             <label for="clinic">  BHT No./ Clinic NO.:</label>
-                            <input type="text" name="clinicno" id="clinic" class="form-control form-control-sm "readonly value= <?php  echo $patient->getBedNo(); ?>  >
+                            <input type="text" name="clinicno" id="clinic" class="form-control form-control-sm "readonly value=" <?php  echo $patient->getBedNo(); ?> " >
 
                         </div>
 
@@ -111,7 +109,7 @@ $test_date=$_SESSION['request_date'];
 
                 <div class="form-group">
                     <label for="diagnosis"> Probable diagnosis:</label>
-                    <input type="text" name="diagnosis" id="diagnosis" class="form-control form-control-sm "readonly value= <?php  echo $patient->getDiagnosis(); ?>  >
+                    <input type="text" name="diagnosis" id="diagnosis" class="form-control form-control-sm "readonly value= "<?php  echo $patient->getDiagnosis(); ?> "
 
                 </div>
 

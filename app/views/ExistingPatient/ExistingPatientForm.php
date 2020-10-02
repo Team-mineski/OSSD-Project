@@ -40,8 +40,13 @@ else{
     <form action ="" method = "post">
 
         <div class="form-row">
+<<<<<<< HEAD
         
           <div class="col-md-3 mb-3 ">
+=======
+
+          <div class="col-md-3 mb-3 col-md-offset-4 mr-3">
+>>>>>>> 43ad8b07a091c6aa9054c33b42dd8bfb6380af90
               <label for="regNo" class ="textStyle">Registration Number</label>
               <input type="text" class="form-control  boxstyles" id="regNo" name="regNo" placeholder="Registration Number" value='<?php echo $patient->getRegNo();?>' readonly>          
           </div>
@@ -58,9 +63,7 @@ else{
           <div class="rowfix">
             <div class="col-md-10 mb-3 ">
                 <label for="age" class ="textStyle">Age</label>
-                <input type="text" class="form-control boxstyles" id="age" name="age" placeholder="Age" value='<?php 
-                  echo  $patient->getAge();?>' 
-                   readonly>          
+                <input type="text" class="form-control boxstyles" id="age" name="age" placeholder="Age" value='<?php echo  $patient->getAge();?>'readonly>          
             </div>
           </div>
           
@@ -110,7 +113,7 @@ else{
           $bedNo=$patient->getBedNo();
           if ($bedNo!=''){
             echo "<div class=\"col-md-2 mb-3 col-md-offset-4\">
-            <label for=\"gender\">Bed Number</label>
+            <label for=\"gender\" class =\"textStyle\">Bed Number</label>
             <input type=\"text\" class=\"form-control\" id=\"bedNo\" name=\"bedNo\" value='$bedNo' readonly>          
         
         </div>";

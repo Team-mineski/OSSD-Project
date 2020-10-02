@@ -110,7 +110,7 @@ $results = $medical->retrieveDataByDate("ecg_table",array('test_request_date','r
                 <div class="col">
                     <div class="form-group w-25">
                         <label for="age"> Age:</label>
-                        <input type="number" name="age" id="age" class="form-control form-control-sm"readonly  value= <?php echo $patient->getAge();?>  >
+                        <input type="text" name="age" id="age" class="form-control form-control-sm"readonly  value= <?php echo $patient->getAge();?>  >
     
                     </div> 
 

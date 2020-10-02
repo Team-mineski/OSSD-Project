@@ -8,7 +8,7 @@ if (!(isset($_SESSION))){
     session_start();
     if (!(isset($_SESSION["username"]))){
         header("Location: ../../../register/login");
-      return;
+        return;
     }
   }
 $medical = Database::getInstance();

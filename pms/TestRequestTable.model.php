@@ -19,7 +19,6 @@ abstract class TestRequestTable{
             $request=new Request($this,$row["Date"],$row["RegNo"]);
             $this->requests[]=$request;
         }
-
     }
 
     public function getRequests(){
