@@ -40,13 +40,8 @@ else{
     <form action ="" method = "post">
 
         <div class="form-row">
-<<<<<<< HEAD
         
           <div class="col-md-3 mb-3 ">
-=======
-
-          <div class="col-md-3 mb-3 col-md-offset-4 mr-3">
->>>>>>> 43ad8b07a091c6aa9054c33b42dd8bfb6380af90
               <label for="regNo" class ="textStyle">Registration Number</label>
               <input type="text" class="form-control  boxstyles" id="regNo" name="regNo" placeholder="Registration Number" value='<?php echo $patient->getRegNo();?>' readonly>          
           </div>
