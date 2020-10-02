@@ -14,7 +14,7 @@ $test_date=$_SESSION['request_date'];
 <html lang="en" dir="ltr">
 	<head>
 		<meta charset="utf-8">
-        <title> Biochemical</title>
+        <title> Biochemical Investigations Request Form</title>
         <link rel = "stylesheet" href = "../bootstrap/css/bootstrap.min.css" integrity="" crossorigin="anonymous">
         <!-- <link rel="stylesheet" href="../css/styles.css"> -->
        <link rel="stylesheet" href="../css/labReportStyles.css">
@@ -59,7 +59,7 @@ $test_date=$_SESSION['request_date'];
                             <div class="form-group w-25">
                             
                                 <label for="age"> Age :</label>
-                                <input type="text" name="age" id="age" class="form-control form-control-sm " value=<?php echo $patient->getAge();?> readonly>
+                                <input type="text" name="age" id="age" class="form-control form-control-sm " value="<?php echo $patient->getAge();?>" readonly>
                             
                             </div>
 
@@ -73,7 +73,7 @@ $test_date=$_SESSION['request_date'];
 
                             <div class="form-group w-50" >
                                 <label for="Dob">Date of Birth :</label> 
-                                <input type="date" name="dob" id="Dob" class="form-control form-control-sm" value=<?php echo $patient->getDOB();?> readonly >
+                                <input type="date" name="dob" id="Dob" class="form-control form-control-sm" value="<?php echo $patient->getDOB();?>" readonly >
                             </div>                            
 
                         </td>
@@ -81,19 +81,19 @@ $test_date=$_SESSION['request_date'];
                         <td>
                             <div class="form-group w-50 ">
                                 <label for="BHT"> BHT/Clinic No. :</label>
-                                <input type="text" name="BHT" id="BHT" class="form-control form-control-sm"  readonly value = <?php echo $patient->getBedNo(); ?>>
+                                <input type="text" name="BHT" id="BHT" class="form-control form-control-sm"  readonly value =" <?php echo $patient->getBedNo(); ?>">
             
                             </div>
 
                             <div class="form-group w-50">
                                 <label for="ward"> Ward/Clinic :</label>
-                                <input type="text" name="ward" id="ward" class="form-control form-control-sm" value=19 readonly>
+                                <input type="text" name="ward" id="ward" class="form-control form-control-sm" value="19" readonly>
             
                             </div>
 
                             <div class="form-group w-50">
                                 <label for="teleno"> Telephone No. of Patient  :</label>
-                                <input type="text" name="teleno" id="teleno" class="form-control form-control-sm"  value=<?php echo $patient->getContact();?> readonly >
+                                <input type="text" name="teleno" id="teleno" class="form-control form-control-sm"  value="<?php echo $patient->getContact();?>" readonly >
             
                             </div>
                         </td>

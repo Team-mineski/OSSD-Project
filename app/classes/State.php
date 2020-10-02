@@ -20,6 +20,8 @@ class NewPatient extends State{
     }
 
     public function displayUI($patient){
+        header("Location: ../../../");
+        return;
     }
 }
 

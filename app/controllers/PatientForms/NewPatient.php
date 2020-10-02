@@ -170,7 +170,7 @@ if (isset($_POST['diagnosis'])) {
         {
           foreach($tests as $test){
                 $class_name = ucfirst($test);
-                $command = new $class_name;
+                $command = new $class_name; //command design pattern
                 $command->execute($medical,array($regNo, date('Y-m-d')));
             //$medical->enterData($test, array('patient_id','sdate'), array($regNo, date('Y-m-d')));
           }

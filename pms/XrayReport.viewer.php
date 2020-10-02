@@ -19,7 +19,7 @@ $test_date=$_SESSION['request_date'];
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Xray form</title>
+    <title>X-Ray Request Form</title>
         <link rel = "stylesheet" href = "../bootstrap/css/bootstrap.min.css" integrity="" crossorigin="anonymous">
         <link rel="stylesheet" href="../css/styles.css">
        <link rel="stylesheet" href="../css/labReportStyles.css">
@@ -36,7 +36,7 @@ $test_date=$_SESSION['request_date'];
     <div class="container">
         <div class="form-group w-25" >
             <label for="date"  >Date:</label>
-            <input type="date" name="date" id="date" class="form-control form-control-sm "  value=<?php echo $test_date;?> readonly>
+            <input type="date" name="date" id="date" class="form-control form-control-sm "  value="<?php echo $test_date;?>" readonly>
 
         </div>
 
@@ -47,7 +47,7 @@ $test_date=$_SESSION['request_date'];
 
                         <div class="form-group ">
                             <label for="name"> Name:</label>
-                            <input type="text" name="name" id="name" class="form-control form-control-sm" value='<?php echo $patient->getName(); ?>' readonly> 
+                            <input type="text" name="name" id="name" class="form-control form-control-sm" value="<?php echo $patient->getName(); ?>" readonly> 
         
                         </div>
 
@@ -60,7 +60,7 @@ $test_date=$_SESSION['request_date'];
                     <td>  
                         <div class="form-group w-50" >
                             <label for="wardno" >Ward No:</label> 
-                            <input type="text" name="wardno" id="wardno" class="form-control form-control-sm " value=19 readonly>
+                            <input type="text" name="wardno" id="wardno" class="form-control form-control-sm " value='19' readonly>
                         </div>
 
                         <td>
@@ -78,7 +78,7 @@ $test_date=$_SESSION['request_date'];
                             <td>
                                 <div class="form-group w-50">
                                     <label for="bht">  B.H.T No:</label>
-                                    <input type="text" name="bht" id="bht"  class="form-control form-control-sm " readonly value = <?php echo $patient->getBedNo(); ?>>
+                                    <input type="text" name="bht" id="bht"  class="form-control form-control-sm " readonly value = "<?php echo $patient->getBedNo(); ?>">
                 
                                 </div> 
                             </td>
@@ -86,7 +86,7 @@ $test_date=$_SESSION['request_date'];
                             <td>
                                 <div class="form-group w-25">
                                     <label for="age"> Age:</label>
-                                    <input type="text" name="age" id="age" class="form-control form-control-sm " value=<?php echo $patient->getAge(); ?> readonly>
+                                    <input type="text" name="age" id="age" class="form-control form-control-sm " value="<?php echo $patient->getAge(); ?>" readonly>
                         
                                 </div>
                             </td>
@@ -219,7 +219,7 @@ $test_date=$_SESSION['request_date'];
                         <div class="form-group  " >
                             <input type="text" name="signrad" id="signrad" class="form-control form-control-sm  ">
                             <div class="text-center">
-                                <label for="signrad"  >Signature of Radiographer</label> 
+                                <label for="signrad">Signature of Radiographer</label> 
                             </div>
                         </div>
                         

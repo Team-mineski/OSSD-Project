@@ -13,8 +13,7 @@
 
 <div class="caption text-center">
 
-  You dont have permission to this page</h1>
-
+<h1>  You dont have permission to this page</h1>
 
 </div>
 

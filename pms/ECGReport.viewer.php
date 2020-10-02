@@ -18,7 +18,7 @@ $test_date=$_SESSION['request_date'];
 <html lang="en" dir="ltr">
 	<head>
 		<meta charset="utf-8">
-        <title>Electrocardiograph Examination</title>
+        <title>Electrocardiograph Examination Request Form</title>
 
         <link rel = "stylesheet" href = "../bootstrap/css/bootstrap.min.css" integrity="" crossorigin="anonymous">
         <!-- <link rel="stylesheet" href="../css/styles.css"> -->
@@ -42,7 +42,7 @@ $test_date=$_SESSION['request_date'];
                 <div class="col">
                     <div class="form-group">
                         <label for="name"> NAME:</label>
-                          <input type="text" name="name" id="name" class="form-control form-control-sm" readonly value=<?php echo $patient->getName()?> >
+                          <input type="text" name="name" id="name" class="form-control form-control-sm" readonly value="<?php echo $patient->getName()?>" >
 
                     </div>
 
@@ -55,7 +55,7 @@ $test_date=$_SESSION['request_date'];
 								<div class="col">
                     <div class="form-group">
                         <label for="pid">  Patient ID:</label>
-                        <input type="text" name="pid" id="pid" class="form-control form-control-sm" readonly value= <?php echo $patient->getRegNo();?> >
+                        <input type="text" name="pid" id="pid" class="form-control form-control-sm" readonly value= "<?php echo $patient->getRegNo();?> ">
 
                     </div>
 
@@ -64,7 +64,7 @@ $test_date=$_SESSION['request_date'];
                 <div class="col">
                     <div class="form-group">
                         <label for="bedno">  BED No:</label>
-                        <input type="text" name="bedno" id="bedno" class="form-control form-control-sm" readonly  value= <?php echo $patient->getBedNo();?>  >
+                        <input type="text" name="bedno" id="bedno" class="form-control form-control-sm" readonly  value=" <?php echo $patient->getBedNo();?>"  >
 
                     </div>
 
@@ -73,7 +73,7 @@ $test_date=$_SESSION['request_date'];
                 <div class="col">
                     <div class="form-group">
                         <label for="wardno">  WARD No:</label>
-                        <input type="number" name="wardno" id="wardno" class="form-control form-control-sm" value=19 readonly>
+                        <input type="number" name="wardno" id="wardno" class="form-control form-control-sm" value='19' readonly>
 
                     </div>
 
@@ -85,14 +85,14 @@ $test_date=$_SESSION['request_date'];
                 <div class="col">
                     <div class="form-group">
                         <label for="bht"> B.H.T No:</label>
-                        <input type="text" name="bht" id="bht" class="form-control form-control-sm" readonly  value= <?php echo $patient->getBedNo();?>   >
+                        <input type="text" name="bht" id="bht" class="form-control form-control-sm" readonly  value=" <?php echo $patient->getBedNo();?>"   >
 
                     </div>
                 </div>
                 <div class="col">
                     <div class="form-group w-25">
                         <label for="age"> Age:</label>
-                        <input type="text" name="age" id="age" class="form-control form-control-sm" value=<?php echo $patient->getAge() ?> readonly>
+                        <input type="text" name="age" id="age" class="form-control form-control-sm" value="<?php echo $patient->getAge() ?>" readonly>
 
                     </div>
 
@@ -115,7 +115,7 @@ $test_date=$_SESSION['request_date'];
         <table class="table table-bordered">
             <thead>
                 <th scope="col" class="optionText"> CLINICAL HISTORY</th>
-                <th scope="col" class="optionText"> ELECTROCARDIOGRAPH EAXMINATION</th>
+                <th scope="col" class="optionText"> ELECTROCARDIOGRAPH EXAMINATION</th>
 
 
             </thead>
