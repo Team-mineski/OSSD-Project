@@ -12,7 +12,6 @@ if (!(isset($_SESSION["username"]))){
   }
 $patient = unserialize($_SESSION['patient']);
 $test_date=$_SESSION['request_date'];
-
 ?>
 
 

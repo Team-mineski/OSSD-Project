@@ -18,7 +18,7 @@ $test_date=$_SESSION['request_date'];
 <html lang="en" dir="ltr">
 	<head>
 		<meta charset="utf-8">
-        <title>ecg</title>
+        <title>Electrocardiograph Examination</title>
 
         <link rel = "stylesheet" href = "../bootstrap/css/bootstrap.min.css" integrity="" crossorigin="anonymous">
         <!-- <link rel="stylesheet" href="../css/styles.css"> -->
@@ -54,7 +54,7 @@ $test_date=$_SESSION['request_date'];
                 </div>
 								<div class="col">
                     <div class="form-group">
-                        <label for="pid">  patient ID:</label>
+                        <label for="pid">  Patient ID:</label>
                         <input type="text" name="pid" id="pid" class="form-control form-control-sm" readonly value= <?php echo $patient->getRegNo();?> >
 
                     </div>
