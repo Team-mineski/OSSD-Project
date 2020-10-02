@@ -41,7 +41,7 @@
     </button>
     <div class="navbar-header">
         <div align='start' class = "mainHeading"> LADY RIDGEWAY HOSPITAL FOR CHILDREN, COLOMBO  </div>
-        <div align='start' class= "mainSubHeading"> OUT-PATIENT DEPARTMENT </div>
+        <div align='start' class= "mainSubHeading"> DERMATOLOGY CLINIC </div>
     </div>
 
 

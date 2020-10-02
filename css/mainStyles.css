@@ -196,8 +196,39 @@ table.table-bordered > tbody > tr > td{
   font-weight: 500;
 }
 
+.printheading{
+  visibility: hidden;
+}
 @media print{
   .printvisible *{
     visibility: hidden;
   }
+  .printheading{
+    visibility: visible;
+    color: black;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    
+    
+  }
+
+  .printable{
+    margin-top: 40px;
+  }
+  .printable *{
+    width: 100%;
+    margin-bottom: 20px;
+    border-color: #297578;
+    
+  }
+ 
+  .textStyle{
+    color: black;
+    font-weight: 600;
+  }
+  .rowfix{
+    width: 50%;
+  }
 }
+

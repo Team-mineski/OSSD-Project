@@ -29,30 +29,34 @@ else{
     <title></title>
   </head>
   <body class = 'mainbody'>
-  <br>
-  <div class = containor  style="margin-left:50px; margin-right:50px;">
+
+  <div class = "container printable"  style="margin-left:50px; margin-right:50px;">
+
+    <div class="printheading">
+      <p >PATIENT INFORMATION</p>
+    </div>
+    
 
     <form action ="" method = "post">
 
         <div class="form-row">
-         
-
-          <div class="col-md-3 mb-3 col-md-offset-4 mr-3">
+        
+          <div class="col-md-3 mb-3 ">
               <label for="regNo" class ="textStyle">Registration Number</label>
-              <input type="text" class="form-control boxstyles" id="regNo" name="regNo" placeholder="Registration Number" value='<?php echo $patient->getRegNo();?>' readonly>          
+              <input type="text" class="form-control  boxstyles" id="regNo" name="regNo" placeholder="Registration Number" value='<?php echo $patient->getRegNo();?>' readonly>          
           </div>
           
         </div>
         
         <div class="form-row">
 
-          <div class="col-md-6 mb-3 col-md-offset-2">
+          <div class="col-md-6 mb-3 ">
             <label for="name" class ="textStyle">Full Name</label>
             <input type="text" class="form-control boxstyles" id="name" name="name" placeholder="Full Name" value='<?php echo  $patient->getName();?>' readonly>
           </div>
 
-          <div class="ml-5">
-            <div class="col-md-10 mb-3 col-md-offset-4 mr-3">
+          <div class="rowfix">
+            <div class="col-md-10 mb-3 ">
                 <label for="age" class ="textStyle">Age</label>
                 <input type="text" class="form-control boxstyles" id="age" name="age" placeholder="Age" value='<?php 
                   echo  $patient->getAge();?>' 
@@ -64,7 +68,7 @@ else{
 
         <div class="form-row">
 
-          <div class="col-md-6 mb-3 col-md-offset-4">
+          <div class="col-md-6 mb-3 ">
               <label for="diagnosis" class ="textStyle">Diagnosis</label>
               <input type="text" class="form-control boxstyles " id="diagnosis" name="diagnosis" placeholder="Diagnosis" value='<?php echo $patient->getDiagnosis();?>' readonly>          
           </div>
@@ -73,13 +77,13 @@ else{
 
         <div class="form-row">
 
-          <div class="col-md-6 mb-3 col-md-offset-4">
+          <div class="col-md-6 mb-3 ">
               <label for="address" class ="textStyle">Full Address</label>
               <input type="text" class="form-control" id="address" name="address" placeholder="Full Address" value='<?php echo$patient->getAddress();?>' readonly>          
           </div>
 
-          <div class="ml-5">
-          <div class="col-md-10 mb-3 col-md-offset-4">
+          <div class="rowfix" >
+          <div class="col-md-10 mb-3 ">
               <label for="address" class ="textStyle">Contact No.</label>
               <input type="text" class="form-control" id="contact" name="contact" placeholder="Contact Number"  value='<?php echo $patient->getContact();?>' readonly>          
           </div>
@@ -88,16 +92,16 @@ else{
         </div>
 
         <div class="form-row">
-          <div class="col-md-2 mb-3 col-md-offset-4">
+          <div class="col-md-2 mb-3">
               <label for="dob" class ="textStyle">Date of Birth</label>
               <input type="date" class="form-control" id="dob" name="dob" value='<?php echo $patient->getDOB();?>' readonly>          
           </div>
-          <div class="col-md-2 mb-3 col-md-offset-4">
+          <div class="col-md-2 mb-3 ">
               <label for="gender" class ="textStyle">Gender</label>
               <input type="text" class="form-control" id="gender" name="gender" value='<?php echo $patient->getGender();?>' readonly>          
         </div>
 
-          <div class="col-md-2 mb-3 col-md-offset-4">
+          <div class="col-md-2 mb-3 ">
               <label for="gender" class ="textStyle">Admission Status</label>
               <input type="text" class="form-control" id="admission" name="admission" value='<?php echo $patient->getAdmissionStatus();?>' readonly>          
           
