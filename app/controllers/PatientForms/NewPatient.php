@@ -79,6 +79,21 @@ if (isset($_POST['diagnosis'])) {
 
   if (isset($_POST['dob'])) {
     $dob = htmlentities($_POST['dob']);
+    $bday = new DateTime($dob);
+    $today = new DateTime();
+    $diff = $today->diff($bday);
+    $y = $diff->y;
+    $m = $diff->m;
+    $d = $diff->d;
+    if ($y!=0){
+      $age = $y . " year/s";
+    }
+    else if ($m!=0){
+      $age = $m . " month/s ".$d." day/s";
+    }
+    else {
+      $age = $d . " day/s";
+    }
 
   }
 
@@ -139,14 +154,18 @@ if (isset($_POST['diagnosis'])) {
       $error = $medical->enterData("patients", array('RegNo', 'FullName', 'Gender', 'FullAddress',
       'DateOfBirth', 'DiagnosisID','BedNo','ContactNo'),
       array($regNo,$name, $gender,$address,$dob,$diagnosis,  $bed, $contact));
+
       if ($error==false){
         $_SESSION["Recheck"]= "Please recheck the data you entered";
         header("Location: ../../views/NewPatient/NewPatientForm.php");
+        return;
       }
+
       else{
       $columns = array('RegNo','Date', 'ClinicalSignsPresented','PrescribedDrugs',"AdditionalNotes");  //don't need to add the ID column
       $medical -> enterData("history",$columns,
                 array($_POST["regNo"],date('y/m/d'), $signs, $medicine,$notes));
+
         if (!(empty($tests)))
         {
           foreach($tests as $test){
@@ -154,10 +173,10 @@ if (isset($_POST['diagnosis'])) {
                 $command = new $class_name;
                 $command->execute($medical,array($regNo, date('Y-m-d')));
             //$medical->enterData($test, array('patient_id','sdate'), array($regNo, date('Y-m-d')));
+          }
         }
-    }
-    header("Location: ../../../");
-
+    //header("Location: ../../../");
+    $patient->displayUI();
       }
 
   }
@@ -170,22 +189,3 @@ if (isset($_POST['diagnosis'])) {
 }
 
     ?>
-
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-  <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel = "stylesheet" href = "../../../bootstrap/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title></title>
-  </head>
-  <body>
-  <script>
-        if ( window.history.replaceState ) {
-            window.history.replaceState( null, null, window.location.href );
-        }
-
-</script>
-
-  </body>
-</html>

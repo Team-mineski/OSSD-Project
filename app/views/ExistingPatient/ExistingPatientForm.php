@@ -54,9 +54,7 @@ else{
           <div class="ml-5">
             <div class="col-md-10 mb-3 col-md-offset-4 mr-3">
                 <label for="age" class ="textStyle">Age</label>
-                <input type="text" class="form-control boxstyles" id="age" name="age" placeholder="Age" value='<?php 
-                  echo  $patient->getAge();?>' 
-                   readonly>          
+                <input type="text" class="form-control boxstyles" id="age" name="age" placeholder="Age" value='<?php echo  $patient->getAge();?>'readonly>          
             </div>
           </div>
           

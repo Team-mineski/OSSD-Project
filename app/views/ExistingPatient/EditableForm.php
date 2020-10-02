@@ -50,7 +50,7 @@ include '../../views/home/cache.php';
           <div class="ml-5">
             <div class="col-md-7 mb-3 col-md-offset-4 mr-3">
                 <label for="age">Age</label>
-                <input type="number" class="form-control" id="age" name="age" placeholder="Age" value='<?php echo $patient->getAge();?>' readonly>          
+                <input type="text" class="form-control" id="age" name="age" placeholder="Age" value='<?php echo $patient->getAge();?>' readonly>          
             </div>
           </div>
           
