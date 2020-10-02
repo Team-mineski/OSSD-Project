@@ -16,7 +16,7 @@ $test_date=$_SESSION['request_date'];
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title> specimen Exam</title>
+    <title> Specimen Examination Request Form</title>
 
         <link rel = "stylesheet" href = "../bootstrap/css/bootstrap.min.css" integrity="" crossorigin="anonymous">
         <!-- <link rel="stylesheet" href="../css/styles.css"> -->
@@ -53,7 +53,7 @@ $test_date=$_SESSION['request_date'];
                 <div class="col">
                     <div class="form-group w-75 " >
                         <label for="bht" >BHT No:</label>
-                        <input type="text" name="bht" id="bht" class="form-control form-control-sm "readonly value=<?php  echo $patient->getBedNo(); ?> >
+                        <input type="text" name="bht" id="bht" class="form-control form-control-sm "readonly value="<?php  echo $patient->getBedNo(); ?>" >
                     </div>
 
                 </div>
@@ -61,7 +61,7 @@ $test_date=$_SESSION['request_date'];
                 <div class="col">
                     <div class="form-group w-75" >
                         <label for="wardno" >Ward No:</label>
-                        <input type="text" name="wardno" id="wardno" class="form-control form-control-sm " value=19 readonly>
+                        <input type="text" name="wardno" id="wardno" class="form-control form-control-sm " value='19' readonly>
                     </div>
 
                 </div>
@@ -70,7 +70,7 @@ $test_date=$_SESSION['request_date'];
 
             <div class="form-group w-25 " >
                 <label for="bedno" >Bed No:</label>
-                <input type="text" name="bedno" id="bedno" class="form-control form-control-sm " readonly value=<?php  echo $patient->getBedNo(); ?> >
+                <input type="text" name="bedno" id="bedno" class="form-control form-control-sm " readonly value="<?php  echo $patient->getBedNo(); ?>" >
             </div>
 
             <div class="form-group  w-75" >
@@ -122,7 +122,7 @@ $test_date=$_SESSION['request_date'];
             <div class="d-flex justify-content-end">
                 <div class="form-group w-25 " >
                     <label for="date"  >Date</label>
-                    <input type="date" name="date" id="date" class="form-control form-control-sm  " value=<?php echo $test_date;?> readonly>
+                    <input type="date" name="date" id="date" class="form-control form-control-sm  " value="<?php echo $test_date;?> "readonly>
 
                 </div>
             </div>

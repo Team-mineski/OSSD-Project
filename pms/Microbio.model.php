@@ -38,26 +38,6 @@ include_once "MicrobioRequestTable.model.php";
 
 
    public function writeToTable(){
-     /*
-     $query = "INSERT INTO medical.microbio_table  (`date`,`regNo`,`lab_no`,`BHT_no`,
-       	`specimen_test`,`probable_diagnosis`,`clinic_details`,`prior_antibiotic`,`antibiotic_given`,`sig_MO`,`name_mo`,`designation`,`completed_date`)
-        VALUES ( '$this->date','$this->regNo' ,'$this->lab_no','$this->BHT_no','$this->specimen_test',
-        '$this->probable_diagnosis','$this->clinic_detail','$this->prior_antibiotic','$this->antibiotic_given','$this->sig_MO',
-        '$this->name_MO','$this->designation','$this->completed_date'); ";
-      echo $query;
-      //$result =mysqli_query( $this->parent_database->getConnection(),$query);
-      $request_table=new MicrobioRequestTable($this->parent_database);
-      $request_table->deleteRowByID($this->regNo);
-      //header("Location: TestRequestLoader.controller.php");
-
-     if(mysqli_query( $this->parent_database->getConnection(),$query)){
-      $request_table=new MicrobioRequestTable($this->parent_database);
-      $request_table->deleteRowByID($this->regNo);
-      header("Location: TestRequestLoader.controller.php");
-    }
-      else{
-        echo "error".mysqli_error($this->parent_database->getConnection());
-    }*/
     $database = $this->parent_database;
         $database->enterData("microbio_table",
 

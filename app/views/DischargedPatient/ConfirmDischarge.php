@@ -53,6 +53,7 @@ if (!(isset($_SESSION))){
         if (isset($_POST['regNo'])){
           $_SESSION["regNo"] = $_POST['regNo'];
           header("Location:../../controllers/PatientForms/ExistingPatient.php");
+          return;
     }
 
 

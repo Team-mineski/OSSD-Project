@@ -115,7 +115,7 @@ if (!(isset($_SESSION))){
                         <div class="form-group w-25">
                             
                             <label for="age"> Age:</label>
-                            <input type="number" name="age" id="age" class="form-control form-control-sm "readonly  value= <?php echo $patient->getAge();?>  >
+                            <input type="text" name="age" id="age" class="form-control form-control-sm "readonly  value= <?php echo $patient->getAge();?>  >
                         
                         </div>
                     </div>

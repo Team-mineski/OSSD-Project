@@ -15,9 +15,6 @@ include_once "LabAssistant.class.php";
 include_once "LabFactory.class.php";
 include_once 'SetUp.php';
 
-//$database=new Database("localhost","gayangi","Pswrd","medical"); //Creating new database
-//$database->connectDatabase(); // Connect the database to PHP
-//$_SESSION['database']=serialize($database);
 $database = Database::getInstance();
 setup();
 

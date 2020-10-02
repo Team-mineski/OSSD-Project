@@ -15,7 +15,6 @@ class Xray_request_table extends TestCommand{
 
 class Biochemical_request_table extends TestCommand{
 
-
     public function execute($medical,$data){
         $medical->enterData("biochemical_request_table", array('regNo','date'),$data);
     }

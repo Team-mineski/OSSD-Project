@@ -18,8 +18,7 @@ if (!(isset($_SESSION["username"]))){
   }
 
 $requests=$_SESSION['requests'];
-//$database=unserialize($_SESSION['database']);
-//$database->connectDatabase();
+
 $database = Database::getInstance();
 $request_index=$_POST['test_request'];     // getting index of selected test in array of requests
 $request=$requests[$request_index];     //getting relavent request object
@@ -48,9 +47,6 @@ switch($test_type){
     case "specimen_exam":
         header("Location:SpecimenExam.viewer.php");
         break;
-        
-    
-
 }
 
 

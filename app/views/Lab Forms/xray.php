@@ -126,7 +126,7 @@ $results = $medical->retrieveDataByDate("xray_table",array('test_request_date', 
                             <td>
                                 <div class="form-group w-25">
                                     <label for="age"> Age:</label>
-                                    <input type="number" name="age" id="age" class="form-control form-control-sm "value='<?php echo $patient->getAge();?>' readonly>
+                                    <input type="text" name="age" id="age" class="form-control form-control-sm "value='<?php echo $patient->getAge();?>' readonly>
                         
                                 </div>
                             </td>

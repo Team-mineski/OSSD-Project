@@ -33,6 +33,7 @@ class Database{
             return self::$instance;
           }
     }
+    
     public function getDatabaseName(){
         return $this->database_name;
     }

@@ -3,8 +3,8 @@
 class Database{
     private $name = "hospital";   //Database name
     private $host = "localhost";    //Database server
-    private $user = "root";  //Database username
-    private $password = "";    //Database password
+    private $user = "gayangi";  //Database username
+    private $password = "Pswrd";    //Database password
     private static $instance;
     private static $link;
 
@@ -113,7 +113,7 @@ class Database{
             }
         }
         $sql .= " FROM " . $this->name.'.patients';
-        $sql.=" JOIN diseases ON patients.DiagnosisID = diseases.DiagnosisID";
+        $sql.=" JOIN diseases ON patients.DiagnosisID = diseases.DiagnosisID WHERE PatientID = $patientID";
         
         $results = (mysqli_query($link, $sql));
         return $results;
