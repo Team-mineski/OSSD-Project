@@ -68,7 +68,7 @@ $test_date=$_SESSION['request_date'];
                         <div class="form-group w-25">
 
                             <label for="age"> Age:</label>
-                            <input type="number" name="age" id="age" class="form-control form-control-sm " selected value= <?php  echo $patient->getAge(); ?> readonly >
+                            <input type="text" name="age" id="age" class="form-control form-control-sm " selected value= <?php  echo $patient->getAge(); ?> readonly >
 
                         </div>
                     </div>

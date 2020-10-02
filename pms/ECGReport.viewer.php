@@ -64,7 +64,7 @@ $test_date=$_SESSION['request_date'];
                 <div class="col">
                     <div class="form-group">
                         <label for="bedno">  BED No:</label>
-                        <input type="number" name="bedno" id="bedno" class="form-control form-control-sm" readonly  value= <?php echo $patient->getBedNo();?>  >
+                        <input type="text" name="bedno" id="bedno" class="form-control form-control-sm" readonly  value= <?php echo $patient->getBedNo();?>  >
 
                     </div>
 
@@ -92,7 +92,7 @@ $test_date=$_SESSION['request_date'];
                 <div class="col">
                     <div class="form-group w-25">
                         <label for="age"> Age:</label>
-                        <input type="number" name="age" id="age" class="form-control form-control-sm" value=<?php echo $patient->getAge() ?> readonly>
+                        <input type="text" name="age" id="age" class="form-control form-control-sm" value=<?php echo $patient->getAge() ?> readonly>
 
                     </div>
 
