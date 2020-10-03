@@ -13,20 +13,25 @@
   </div>
 
 </div> -->
-
-<div class="container mainbodyAdmin">
+<div class="container-fluid homebody ">
+<div class="imageview">
 <div class="welcomeHeading text-center">
-	<h1 style="padding:20px"><?php if (currentUser()) {
+
+	<?php if (currentUser()) {
+  
+    echo "<h1 style=\"margin-top:15px\"> Welcome Back!!</h1>";
+    echo "<h2 style=\"padding:5px ;color:#FEA736; \">";
     echo currentUser()->username;
+    echo "</h2>";
   }else {
-    echo "";
+  echo "<h1 style=\"margin-top:15px\"> Welcome!!</h1>";
   }
 
   ?>
-  </h1>
-  <h1>
-  Welcome to the website</h1>
+ 
+  
 
+</div>
 </div>
 </div>
 
