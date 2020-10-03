@@ -51,7 +51,7 @@ if (!(isset($_SESSION))){
                 echo 
             "
             <tr>
-            <form action = \"../../views/Lab Forms/xray.php\" method = post>
+            <form action = \"../../views/Lab Forms/X Ray.php\" method = post>
                 <td style=\"text-align:center\"> <input type=\"text\"  name = \"date\" id = \"date\" value=$date readonly class ='boxstyles'/> </td>
                 <td style=\"text-align:center\">
                 

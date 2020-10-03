@@ -29,11 +29,11 @@ if (!(isset($_SESSION))){
   <div class = "container d-flex justify-content-center" >
 
   <div class="form-group w-25">
-        <button type="button" class="btn btn-outline-success mr-4 btn-block justify-content-center"  onclick="window.location.href = '../TestResults/BiochemicalInvestigations.php';">Biochemical Investigations</button>
-        <button type="button" class="btn btn-outline-success mr-4 btn-block"  onclick="window.location.href = '../TestResults/ECG.php';">ECG  </button>
-        <button type="button" class="btn btn-outline-success mr-4 btn-block"  onclick="window.location.href = '../TestResults/microbio.php';">Microbiology Tests</button>
-        <button type="button" class="btn btn-outline-success mr-4 btn-block"  onclick="window.location.href =  '../TestResults/SpecimenExamination.php';">Specimen Examinations</button>
-        <button type="button" class="btn btn-outline-success mr-4 btn-block"  onclick="window.location.href = '../TestResults/XRay.php';">X-Rays</button>
+        <button type="button" class="btn btn-outline-success mr-4 btn-block justify-content-center"  onclick="window.location.href = '../Lab Form Completed Requests/Biochemical Investigation.php';">Biochemical Investigations</button>
+        <button type="button" class="btn btn-outline-success mr-4 btn-block"  onclick="window.location.href = '../Lab Form Completed Requests/ECG.php';">ECG  </button>
+        <button type="button" class="btn btn-outline-success mr-4 btn-block"  onclick="window.location.href = '../Lab Form Completed Requests/Microbiology Request.php';">Microbiology Tests</button>
+        <button type="button" class="btn btn-outline-success mr-4 btn-block"  onclick="window.location.href =  '../Lab Form Completed Requests/Specimen Examination.php';">Specimen Examinations</button>
+        <button type="button" class="btn btn-outline-success mr-4 btn-block"  onclick="window.location.href = '../Lab Form Completed Requests/X Ray.php';">X-Rays</button>
         
   </div>
 </div>
