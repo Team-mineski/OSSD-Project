@@ -37,7 +37,7 @@ $test_date=$_SESSION['request_date'];
                             <td >
                                 <div class="form-group w-75" >
                                     <label for="Date">Date of receipt</label>
-                                    <input type="date" name="date_of_receipt" id="Date" value = "<?php echo $test_date?>" class="form-control form-control-sm">
+                                    <input type="date" name="date_of_receipt" id="Date" value = "<?php echo $test_date?>" max=<?php echo date('Y-m-d');?>class="form-control form-control-sm">
                                 </div>
                             </td>
                             <td>

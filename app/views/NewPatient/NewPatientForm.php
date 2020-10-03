@@ -89,7 +89,7 @@ if (!(isset($_SESSION))){
           <div class="ml-5">
           <div class="col-md-12 mb-3 col-md-offset-4">
                 <label for="dob" class ="textStyle">Date of Birth</label>
-                <input type="date" class="form-control boxstyles" id="dob" name="dob"  autocomplete="off" required>
+                <input type="date" class="form-control boxstyles" id="dob" name="dob" max=<?php echo date('Y-m-d');?> autocomplete="off" required>
             </div>
             </div>
 

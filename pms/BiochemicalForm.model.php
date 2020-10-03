@@ -31,11 +31,11 @@ class BiochemicalForm{
         $this->regNo=$regNo;
         $this->lab_ref_no=htmlentities($_POST['refnum']);
         $this->bht_no=$bht;
-        $this->fasting_status=htmlentities($_POST['inlineCheckbox1']);
+        $this->fasting_status=($_POST['inlineCheckbox1']);
         $this->clinical_history=htmlentities($_POST['clinical_history']);
-        $this->serum=implode(",",htmlentities($_POST['Serum']));
-        $this->plasma_glu=implode(',',htmlentities($_POST['Plasma']));
-        $this->csf=implode(',',htmlentities($_POST['CSF']));
+        $this->serum=implode(",",($_POST['Serum']));
+        $this->plasma_glu=implode(',',($_POST['Plasma']));
+        $this->csf=implode(',',($_POST['CSF']));
         $this->officer=htmlentities($_POST['offname']);
         $this->date_request=htmlentities($_POST['Date']);
         $this->date = $date;
@@ -45,19 +45,10 @@ class BiochemicalForm{
         $this->nursing_officer=htmlentities($_POST['offname2']);
         $this->date_lab_rec=htmlentities($_POST['datefinal']);
         $this->time_lab_rec=htmlentities($_POST['timefinal']);
-        $this->last_check=implode(',',htmlentities($_POST['last_checkbox']));
+        $this->last_check=implode(',',($_POST['last_checkbox']));
 }
 
     public function writeToTable(){
-/*
-        $query="INSERT INTO medical.biochemical_table(`regNo`, `lab_ref_no`, `bht_no`, `fasting_status`, `clinical_history`, `serum`, 
-        `plasma_glu`, `csf`, `officer`, `date`, 
-        `date_filled`,`time_filled`,`nursing_officer`,`date_lab_rec`,`time_lab_rec`,`last_check`) 
-        VALUES ('$this->regNo','$this->lab_ref_no','$this->bht_no','$this->fasting_status','$this->clinical_history',
-        '$this->serum','$this->plasma_glu','$this->csf','$this->officer','$this->date_request','$this->date_filled',
-        '$this->time_filled','$this->nursing_officer',
-        '$this->date_lab_rec','$this->time_lab_rec','$this->last_check')";        //name format use for naming tables is <test_type>_table
-        echo $query;*/
         $database = $this->parent_database;
         $database->enterData("biochemical_table",
         array('regNo', 'test_request_date','lab_ref_no','bht_no','fasting_status',
@@ -75,21 +66,6 @@ class BiochemicalForm{
         header("Location: /Tuto/");
 
     }
-
-    //temporary
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
 

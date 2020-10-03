@@ -25,7 +25,7 @@
               <img  src="../../css/warning.png" alt="" class ="warningIcon">
             </div>
            
-              <h2 align ="center"  class="attentionText">Attention! </h2>
+              <h2 align ="center"  class="attentionText">Member account deletion:</h2>
               <h6 align ="center" class="attentionText"> You are going to delete a member from the system</h6>
               <br>
   
