@@ -53,7 +53,7 @@ if (!(isset($_SESSION))){
                 echo 
             "
             <tr>
-            <form action = \"../../views/Lab Forms/MicrobiologyRequest.php\" method = post>
+            <form action = \"../../views/Lab Forms/Microbiology Request.php\" method = post>
                 <td style=\"text-align:center\"> <input type=\"text\"  name = \"date\" value=$date readonly class ='boxstyles'/> </td>
                 <td style=\"text-align:center\">
                     <button type = \"submit\" name = \"test\" class ='btn btn-outline-success'> View Results </button>
