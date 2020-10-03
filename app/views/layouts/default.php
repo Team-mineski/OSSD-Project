@@ -17,7 +17,7 @@
     <link rel="stylesheet" media="screen" href="<?=PROOT?>img/test.css">
     <link rel = "stylesheet" href = "/Tuto/css/navNsideStyles.css">
     <link rel = "stylesheet" href = "/Tuto/css/mainStyles.css">
-    <
+    
 
     <?=  $this->content('head'); ?>
 
