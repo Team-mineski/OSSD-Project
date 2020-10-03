@@ -11,10 +11,10 @@
 <br>
 <br>
 <br>
-<h3>  You dont have permission to this page.</h3>
+<h3 class="textStyle">  You dont have permission to this page.</h3>
 <br>
-<h5>  Please return to the home page, </h5>
-<h5>  or login with the correct account. </h5>
+<h5 class="textStyle">  Please return to the home page, </h5>
+<h5 class="textStyle">  or login with the correct account. </h5>
 
 </div>
 
