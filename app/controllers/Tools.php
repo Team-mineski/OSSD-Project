@@ -60,7 +60,7 @@ class Tools extends Controller
         $posted_values['username'] = $_POST['username'];
 
         $posted_values['smessage']= '<div class="alert alert-success w-50 deletepagesuceespopup" role="alert">
-          User exists! check user details below before you delete
+          The user exists. Please check user details below before you delete the account.
             </div>';
 
         if(isset($_POST['delete'])){
@@ -70,7 +70,7 @@ class Tools extends Controller
       else{
         $posted_values['message']=
         '<div class="alert alert-warning w-50 deletepagepopups" role="alert">
-        Invalid Username or Account type!
+        Invalid username / account type!
           </div>';
 
       }

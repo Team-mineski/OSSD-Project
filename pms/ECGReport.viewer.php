@@ -178,7 +178,7 @@ $test_date=$_SESSION['request_date'];
             <div class="row ">
 
                     <div class="col">
-                        <input type="date" name="dates" class="form-control form-control-sm" placeholder="DATE STAMP">
+                        <input type="date" name="dates" max=<?php echo date('Y-m-d');?> class="form-control form-control-sm" placeholder="DATE STAMP">
                     </div>
 
                     <div class="col">

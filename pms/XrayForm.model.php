@@ -56,22 +56,6 @@ class XrayForm{
 
     public function writeToTable(){
         $dateToday = date('Y-m-d');
-        /*
-        $query="INSERT INTO medical.xray_table(`date`, `regNo`, `bht_no`, `surgeon`, `signature`, `stamp`, `xray_no`, `xray_room`, `size`, `remarks`, `sign_radio`,`completed_date`,`region`) 
-        VALUES ('$this->date','$this->regNo','$this->bht_no','$this->surgeon','$this->signature','$this->date_stamp',
-        '$this->xray_no','$this->xray_room','$this->size','$this->remarks','$this->sign_radio','$dateToday','$this->region')";        //name format use for naming tables is <test_type>_table
-        //$result=mysqli_query($this->parent_database->getConnection(),$query);
-        echo $query;
-
-        if(mysqli_query( $this->parent_database->getConnection(),$query)){
-            echo $this->patient_id;
-            $request_table=new XrayRequestTable($this->parent_database);
-            $request_table->deleteRowByID($this->regNo);
-            header("Location: TestRequestLoader.controller.php");
-         }
-           else{
-             echo "error".mysqli_error($this->parent_database->getConnection());
-        }*/
         $database = $this->parent_database;
         $dateToday = date('Y-m-d');
         $database->enterData("xray_table",
