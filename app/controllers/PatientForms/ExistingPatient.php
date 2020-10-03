@@ -100,9 +100,7 @@ if (($results)) {
         unset($_SESSION['Patient']);
       }
       $_SESSION["Patient"] = $patient;
-      header("Location: ../../views/ExistingPatient/ExistingPatientForm.php");
-      //$patient->displayUI();
-    //include '../../views/ExistingPatient/ExistingPatientForm.php';
+      $patient->displayUI();
 }
 
 else{

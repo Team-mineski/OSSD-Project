@@ -134,7 +134,7 @@ if (isset($_POST['diagnosis'])) {
       if (sizeof($results)!=0) {
         foreach ($results as $row)
           {
-            $diagnosis = $row["DiagnosisID"];
+            $diagnosisID = $row["DiagnosisID"];
           }
       }
       else{
@@ -144,7 +144,7 @@ if (isset($_POST['diagnosis'])) {
           if (sizeof($results)!=0) {   //PLEASE FIND A BETTER METHOD TO GET THE MOST RECENTLY ENTERED ID
             foreach ($results as $row)
               {
-                $diagnosis = $row["DiagnosisID"];
+                $diagnosisID = $row["DiagnosisID"];
               }
           }
       }

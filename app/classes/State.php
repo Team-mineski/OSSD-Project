@@ -3,7 +3,6 @@
 abstract class State
 {
     private $remark;
-
     abstract public function goNext($patient): void;
     abstract public function displayUI($patient);
 }
@@ -20,7 +19,7 @@ class NewPatient extends State{
     }
 
     public function displayUI($patient){
-        header("Location: ../../../");
+        header("Location: ../../views/ExistingPatient/ExistingPatientForm.php");
         return;
     }
 }
@@ -37,7 +36,8 @@ class ExistingPatient extends State{
     }
 
     public function displayUI($patient){
-        include "../../views/ExistingPatient/ExistingPatientForm.php";
+        header("Location: ../../views/ExistingPatient/ExistingPatientForm.php");
+        return;
     }
 }
 
