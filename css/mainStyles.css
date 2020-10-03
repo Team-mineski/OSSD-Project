@@ -75,6 +75,9 @@ table.table-bordered > tbody > tr > td{
   
   
 }
+.roundbtn:hover{
+  opacity: 60%;
+}
 
 .iconsize{
   
