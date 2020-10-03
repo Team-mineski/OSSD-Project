@@ -14,11 +14,8 @@ class Register extends Controller
   public function loginAction()
   {
 
-    //echo password_hash('test123', PASSWORD_DEFAULT);
       $validation = new Validate();
       if($_POST){
-        //dnd($_POST);
-        // form validation
       $validation->check($_POST,[
         'username' => [
           'display' => "Username",

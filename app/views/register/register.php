@@ -38,7 +38,7 @@
         </div>
 
         <div class="form-group">
-          <label class = "badge badge-danger">Attention! Different user types have different permissions in the system.</label>
+          <label class = "badge badge-danger">Attention! Different user types will have different permissions in the system.</label>
         </div>
 
         <div class="form-group w-50">
