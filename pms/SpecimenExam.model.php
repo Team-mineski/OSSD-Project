@@ -70,30 +70,11 @@ class SpecimenExam {
     $this->counterreceived,$this->remarks,$this->lab_no,$this->labdate,$this->labreceived,$this->labnotice,
     $this->labsig,$this->report,$this->reportcheck,$this->sentdate),
     );
-     /*
-    $query = "INSERT INTO medical.specimen_exam_table  (`date`,`serial_no`,`patient_id`,`BHT_no`,
-       `exams`,`collect_date`,`collect_time`,`sigMO`,`institution_No`,`counter_date`,`counter_time`,`received_by`,
-        `remarks`,`lab_no`,`lab_date`,`lab_received_by`,`lab_note`,`lab_sig`,`report`,`report_check`,`sentdate`)
-       VALUES ('$this->date','$this->serial_no', '$this->patient_id','$this->BHT_no' ,'$this->matandexams','$this->coldate','$this->coltime',
-       '$this->sig_MO','$this->institutionNo','$this->counterdate','$this->countertime',
-       '$this->counterreceived','$this->remarks','$this->lab_no','$this->labdate','$this->labreceived','$this->labnotice',
-        '$this->labsig','$this->report','$this->reportcheck','$this->sentdate'  ); ";
-        echo $query;*/
-
-     //$result =mysqli_query( $this->parent_database->getConnection(),$query);
-     //if(mysqli_query( $this->parent_database->getConnection(),$query)){
         $request_table=new SpecimenExamRequestTable($this->parent_database);
         $request_table->deleteRowByID($this->regNo);
         header("Location: /Tuto/");
-   //}
-   //  else{
-   //}
 
   }
 }
-
-
-
-
 
  ?>

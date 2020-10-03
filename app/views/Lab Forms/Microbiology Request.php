@@ -85,12 +85,12 @@ if (!(isset($_SESSION))){
                             <td >  
                                 <div class="form-group w-50" >
                                     <label for="Date">Date of receipt</label> 
-                                    <input type="date" name="date_of_recipt" id="Date" class="form-control form-control-sm"readonly  value= <?php echo $date;?>  > 
+                                    <input type="date" name="date_of_recipt" id="Date" class="form-control form-control-sm"readonly  value= "<?php echo $date;?>"  > 
                                 </div>
                             </td>
                             <td>
                                 <label for="labno">Lab No.</label>
-                                <input type="number" name="labno" id="labno" class="form-control form-control-sm"readonly  value= <?php echo $lab_no;?>  >
+                                <input type="number" name="labno" id="labno" class="form-control form-control-sm"readonly  value= "<?php echo $lab_no;?>"  >
                                 
                             </td>
                         </tr>
@@ -107,7 +107,7 @@ if (!(isset($_SESSION))){
             <form action="" class="main-form">
                 <div class="form-group ">
                     <label for="name"> Name:</label>
-                    <input type="text" name="name" id="name" class="form-control form-control-sm"readonly  value= <?php echo $patient->getName();?>  >
+                    <input type="text" name="name" id="name" class="form-control form-control-sm"readonly  value=" <?php echo $patient->getName();?>"  >
 
                 </div>
                 <div class="row">
@@ -115,7 +115,7 @@ if (!(isset($_SESSION))){
                         <div class="form-group w-25">
                             
                             <label for="age"> Age:</label>
-                            <input type="text" name="age" id="age" class="form-control form-control-sm "readonly  value= <?php echo $patient->getAge();?>  >
+                            <input type="text" name="age" id="age" class="form-control form-control-sm "readonly  value= "<?php echo $patient->getAge();?>"  >
                         
                         </div>
                     </div>
@@ -135,14 +135,14 @@ if (!(isset($_SESSION))){
                     <div class="col">
                         <div class="form-group w-50">
                             <label for="ward"> Ward:</label>
-                            <input type="text" name="ward" id="ward" class="form-control form-control-sm"readonly  value= <?php echo 19;?>  >
+                            <input type="text" name="ward" id="ward" class="form-control form-control-sm"readonly  value=" <?php echo 19;?>"  >
         
                         </div>
                     </div>
                     <div class="col">
                         <div class="form-group w-50">
                             <label for="clinic">  BHT No./ Clinic NO.:</label>
-                            <input type="text" name="clinic" id="clinic" class="form-control form-control-sm "readonly  value= <?php echo $BHT_no;?>  >
+                            <input type="text" name="clinic" id="clinic" class="form-control form-control-sm "readonly  value= "<?php echo $BHT_no;?>"  >
         
                         </div> 
 
@@ -151,13 +151,13 @@ if (!(isset($_SESSION))){
 
                 <div class="form-group">
                     <label for="test"> Specimen &amp; Test:</label>
-                    <input type="text" name="test" id="test" class="form-control form-control-sm"readonly  value= <?php echo $specimen_test;?>  >
+                    <input type="text" name="test" id="test" class="form-control form-control-sm"readonly  value=" <?php echo $specimen_test;?>"  >
 
                 </div>
 
                 <div class="form-group">
                     <label for="diagnosis"> Probable diagnosis:</label>
-                    <input type="text" name="diagnosis" id="diagnosis" class="form-control form-control-sm "readonly  value= <?php echo $patient->getDiagnosis();?>  >
+                    <input type="text" name="diagnosis" id="diagnosis" class="form-control form-control-sm "readonly  value= "<?php echo $patient->getDiagnosis();?> " >
 
                 </div>
 
@@ -193,13 +193,13 @@ if (!(isset($_SESSION))){
                     
                     <div class="form-group w-50">
                         <label for="name"> Signature of Medical Officer:</label>
-                        <input type="text" name="name" id="name" class="form-control form-control-sm"readonly  value= <?php echo $sig_MO;?>  >
+                        <input type="text" name="name" id="name" class="form-control form-control-sm"readonly  value= "<?php echo $sig_MO;?>"  >
     
                     </div>
 
                     <div class="form-group w-50">
                         <label for="name"> Name:</label>
-                        <input type="text" name="name" id="name" class="form-control form-control-sm"readonly  value= <?php echo $name_mo;?>  >
+                        <input type="text" name="name" id="name" class="form-control form-control-sm"readonly  value= "<?php echo $name_mo;?>"  >
     
                     </div>
 

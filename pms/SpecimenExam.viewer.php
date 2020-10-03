@@ -85,7 +85,7 @@ $test_date=$_SESSION['request_date'];
                 <div class="col">
                     <div class="form-group w-50">
                         <label for="coldate"> Date of collection:</label>
-                        <input type="date" name="coldate" id="coldate" class="form-control form-control-sm">
+                        <input type="date" name="coldate" id="coldate" max=<?php echo date('Y-m-d');?> class="form-control form-control-sm">
 
                     </div>
                 </div>
@@ -100,7 +100,7 @@ $test_date=$_SESSION['request_date'];
             </div>
 
             <br>
-            <p class="optionText">  Clinical history (a full clinical history will facilitate laboratory diagnosis) </p>
+            <p class="optionText">  Clinical History (a full clinical history will facilitate laboratory diagnosis) </p>
             <br>
 
 
@@ -122,7 +122,7 @@ $test_date=$_SESSION['request_date'];
             <div class="d-flex justify-content-end">
                 <div class="form-group w-25 " >
                     <label for="date"  >Date</label>
-                    <input type="date" name="date" id="date" class="form-control form-control-sm  " value="<?php echo $test_date;?> "readonly>
+                    <input type="date" name="date" id="date" class="form-control form-control-sm">
 
                 </div>
             </div>
@@ -193,7 +193,7 @@ $test_date=$_SESSION['request_date'];
                 <div class="col">
                     <div class="form-group w-50 " >
                         <label for="labdate" >Date:</label>
-                        <input type="date" name="labdate" id="labdate" class="form-control form-control-sm ">
+                        <input type="date" name="labdate" id="labdate"  class="form-control form-control-sm ">
                     </div>
 
                 </div>
@@ -238,7 +238,7 @@ $test_date=$_SESSION['request_date'];
                 <div class="col">
                     <div class="form-group ">
                         <label for="senton">Sent on: </label>
-                        <input type="date" name="senton" id="senton" class="form-control form-control-sm ">
+                        <input type="date" name="senton" id="senton"  class="form-control form-control-sm ">
                     </div>
 
                 </div>

@@ -34,7 +34,7 @@ $test_date=$_SESSION['request_date'];
                     <div class="col-4">
                         <div class="form-group w-50">
                             <label for="ref"> Lab Reference No.</label> 
-                            <input type="text" name="refnum" id="ref" class="form-control" >
+                            <input type="text" name="refnum" id="ref" class="form-control" required>
                         </div>
 
                     </div>
@@ -140,7 +140,7 @@ $test_date=$_SESSION['request_date'];
 
             <div class="form-group " >
                 <label for="address" > Relevant clinical history and diagnosis :</label> 
-                <textarea  id="address" cols="" rows="2" class="form-control form-control-sm" name="clinical_history"></textarea>
+                <textarea  id="address" cols="" rows="2" class="form-control form-control-sm" name="clinical_history"><?php echo $patient->getDiagnosis();?></textarea>
             </div>
 
             <hr class="newhr"> 
@@ -339,7 +339,7 @@ $test_date=$_SESSION['request_date'];
 
                             <div class="form-group w-25" >
                                 <label for="Date">Date :</label> 
-                                <input type="date" name="Date" id="Date" class="form-control form-control-sm">
+                                <input type="date" name="Date" id="Date" max=<?php echo date('Y-m-d');?> class="form-control form-control-sm">
                             </div>                            
 
                         </td>
@@ -349,7 +349,7 @@ $test_date=$_SESSION['request_date'];
 
                             <div class="form-group w-50" >
                                 <label for="Date2">Date :</label> 
-                                <input type="date" name="Date2" id="Date2" class="form-control form-control-sm">
+                                <input type="date" name="Date2" id="Date2" max=<?php echo date('Y-m-d');?> class="form-control form-control-sm">
                             </div> 
 
                             <div class="form-group w-50">
@@ -383,7 +383,7 @@ $test_date=$_SESSION['request_date'];
             <div class="row text-left ">
                 <div class="col ">
                     <div class="form-group w-50">
-                        <input type="date" class="form-control" name="datefinal">
+                        <input type="date" class="form-control" max=<?php echo date('Y-m-d');?> name="datefinal">
                     </div>
                 </div>
 

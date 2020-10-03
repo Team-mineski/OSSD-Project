@@ -28,11 +28,11 @@
             <!-- <option selected class="textStyle">Choose...</option> -->
             <option value="Admin" class="textStyle">Admin</option>
             <option  value="Doctor" class="textStyle">Doctor</option>
-            <option value="xray_lab" class="textStyle">X-ray Lab Assistant</option>
+            <option value="xray_lab" class="textStyle">X-Ray Lab Assistant</option>
             <option value="ecg_lab" class="textStyle">ECG Lab Assistant</option>
             <option value="specimen_exam_lab" class="textStyle">Specimen Exam Lab Assistant</option>
             <option value="biochemical_lab" class="textStyle">Biochemical Lab Assistant</option>
-            <option value="microbio_lab" class="textStyle">Microbio Lab Assistant</option>
+            <option value="microbio_lab" class="textStyle">Microbiology Lab Assistant</option>
             
           </select>
         </div>
