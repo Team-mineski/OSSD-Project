@@ -13,18 +13,17 @@
     <script src="<?=PROOT?>js/jQuery-2.2.4.min.js"></script>
     <script src="<?=PROOT?>js/bootstrap.min.js"></script>
  
-    <!-- <link rel="stylesheet" media="screen" href="<?=PROOT?>style.css"> -->
+
     <link rel="stylesheet" media="screen" href="<?=PROOT?>img/test.css">
     <link rel = "stylesheet" href = "/Tuto/css/navNsideStyles.css">
     <link rel = "stylesheet" href = "/Tuto/css/mainStyles.css">
-    <!-- <link rel="stylesheet" media="screen" href="/Tuto/css/styles.css"> -->
-
+    <
 
     <?=  $this->content('head'); ?>
 
 
   </head>
-  <body class ="mainbody">
+  <body class ="mainbody " id ="body1" >
       <div class="offset">
         <?php include 'main_menu.php' ?>
         
