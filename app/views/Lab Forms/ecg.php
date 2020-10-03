@@ -3,10 +3,12 @@ include '../../models/DatabaseConnection/Database.php';
 include '../../classes/Patient.php';
 include '../../views/home/cache.php';
 include '../layouts/docmenu.php';
+
 if (!(isset($_SESSION))){
     session_start();
-    if (!(isset($_SESSION["username"]))){
-        header("Location: ../../../register/login");
+    if ((!(isset($_SESSION["username"])))||($_SESSION["type"]!="Doctor"))
+    {
+      header("Location: ../../../restricted/index");
       return;
     }
   }

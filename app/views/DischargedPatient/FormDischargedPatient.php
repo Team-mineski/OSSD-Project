@@ -1,4 +1,18 @@
+<?php
+include '../layouts/docmenu.php';
+include '../../views/HeaderAndFooter/header.php';
+include '../../models/DatabaseConnection/Database.php';
+include '../HeaderAndFooter/Discharged.php';
 
+if (!(isset($_SESSION))){
+  session_start();
+  if ((!(isset($_SESSION["username"])))||($_SESSION["type"]!="Doctor"))
+  {
+    header("Location: ../../../restricted/index");
+    return;
+  }
+}
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
