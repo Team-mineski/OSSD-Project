@@ -6,10 +6,11 @@ include_once "Database.model.php";
 
 
 session_start();
-if (!(isset($_SESSION["username"]))){
-    header("Location: ../register/login");
+if ((!(isset($_SESSION["username"])))||($_SESSION["type"]!="xray_lab"))
+{
+    header("Location: ../restricted/index");
     return;
-  }
+}
 $database = Database::getInstance();
 $patient = unserialize($_SESSION['patient']);
 $regNo=$patient->getRegNo();

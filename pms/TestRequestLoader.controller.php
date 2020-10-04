@@ -17,8 +17,6 @@ include_once 'SetUp.php';
 
 $database = Database::getInstance();
 setup();
-
-
 $factory=new Factory($database);
 $lab_assistant=new LabAssistant();
 

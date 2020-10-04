@@ -6,10 +6,11 @@
 include "../app/views/layouts/labmenu.php";
 include_once 'Patient.class.php';
 session_start();
-if (!(isset($_SESSION["username"]))){
-    header("Location: ../register/login");
+if ((!(isset($_SESSION["username"])))||($_SESSION["type"]!="xray_lab"))
+{
+    header("Location: ../restricted/index");
     return;
-  }
+}
 $patient = unserialize($_SESSION['patient']);
 $test_date=$_SESSION['request_date'];
 ?>

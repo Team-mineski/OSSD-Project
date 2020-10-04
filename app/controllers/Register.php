@@ -37,6 +37,7 @@ class Register extends Controller
           $user->login($remeber);
           session_start();
           $_SESSION["username"] = $_POST['username'];
+          $_SESSION["type"] = currentUser()->acl;
           //dnd($_POST);
           Router::redirect('');
         }

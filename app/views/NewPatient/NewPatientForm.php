@@ -4,11 +4,13 @@
 include '../../models/DatabaseConnection/Database.php';
 include '../../classes/Patient.php';
 // include '../../cache.php';
+
 if (!(isset($_SESSION))){
   session_start();
-  if (!(isset($_SESSION["username"]))){
-    header("Location: ../../../register/login");
-    //header("Location: ../register/login.php");
+  if ((!(isset($_SESSION["username"])))||($_SESSION["type"]!="Doctor"))
+  {
+    header("Location: ../../../restricted/index");
+    return;
   }
   if (isset($_SESSION["Recheck"])){
     $error = $_SESSION["Recheck"];

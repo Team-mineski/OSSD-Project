@@ -4,8 +4,10 @@ include_once '../../models/DatabaseConnection/Database.php';
 
 if (!(isset($_SESSION))){
   session_start();
-  if (!(isset($_SESSION["username"]))){
-    header("Location: ../../../register/login");
+  if ((!(isset($_SESSION["username"])))||($_SESSION["type"]!="Doctor"))
+  {
+    header("Location: ../../../restricted/index");
+    return;
   }
 }
 ?>
