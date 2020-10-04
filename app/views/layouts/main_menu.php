@@ -4,14 +4,14 @@
 
  ?>
 
-<nav class="navbar navbar-expand-md fixed-top">
+<nav class="navbar navbar-expand-md fixed-top ">
   <a class="navbar-brand" href="<?=PROOT?>home"><img src="<?=PROOT?>css/hoslogo.png"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon">    </span>
   </button>
   <div class="navbar-header">
         <div align='start' class = "mainHeading"> LADY RIDGEWAY HOSPITAL FOR CHILDREN, COLOMBO  </div>
-        <div align='start' class= "mainSubHeading"> OUT-PATIENT DEPARTMENT </div>
+        <div align='start' class= "mainSubHeading"> DERMATOLOGY CLINIC </div>
   </div>
 
   <div class="collapse navbar-collapse" id="main_menu">

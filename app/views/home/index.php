@@ -4,28 +4,22 @@
 
 
 
-<!-- <div class="landing">
-  <div class="home-wrap">
-    <div  class="home-inner">
 
-    </div>
-
-  </div>
-
-</div> -->
-
-<div class="container mainbodyAdmin">
+<div class="imageview">
 <div class="welcomeHeading text-center">
-	<h1 style="padding:20px"><?php if (currentUser()) {
+
+	<?php if (currentUser()) {
+    echo "<h1 style=\"margin-top:15px\"> Welcome back,</h1><div>";
+    echo "<h2 style=\" color:#FEA736; \">";
     echo currentUser()->username;
+    echo "</h2></div>";
   }else {
-    echo "";
+  echo "<h1 style=\"margin-top:15px\"> Welcome to the <div>website </div></h1>";
   }
 
   ?>
-  </h1>
-  <h1>
-  Welcome to the website</h1>
+ 
+  
 
 </div>
 </div>

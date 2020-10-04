@@ -1,23 +1,23 @@
 
 .navbar
 {
-  padding: 30px;
-  height: 2;
+  padding: 5px;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 0.9rem;
   letter-spacing: 0.1rem;
   background-color:  #297578 !important;
-  margin-bottom:20px !important ;
+  margin-bottom:10px !important ;
 
   
 }
+
 .navbar-toggler-icon {
   background-image: url('https://mdbootstrap.com/img/svg/hamburger7.svg?color=FEA736') !important;
   }
 .navbar-brand img
 {
-  height: 5rem;
+  height: 6rem;
 }
 
 /*--- gap among nav items --*/
@@ -88,10 +88,6 @@ nav .navbar-nav li a{
 
 /* welcom heading */
 
-.welcomeHeading{
-  color: white;
-  font-weight: 600;
-  text-shadow: 5px black ;
-}
+
 
 
