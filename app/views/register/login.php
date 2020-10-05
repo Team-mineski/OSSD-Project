@@ -6,7 +6,7 @@
 <body class = "mainbody" style="margin-top: 200px;">
   <div class="container ">
     <div class="row justify-content-center align-items-center">
-    <div class="col-md-5  ">
+    <div class="col-md-5 " style="margin-right:50px;">
           <img src="../css/login.png" alt="" class ="biglogin">
         </div>
       <div class="col col-md-5 ">
