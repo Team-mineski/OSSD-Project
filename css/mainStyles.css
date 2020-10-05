@@ -62,13 +62,16 @@
   /* background: url('add-user.png');   */
 
 }
-
-@media (max-width:767px){
+@media (max-width:1100px){
   .welcomeHeading{
     left: 50%;
     top: 50%;
     
   }
+}
+
+@media (max-width:767px){
+  
   .mainbodyAdmin{
     background-color: #FEA736;
     margin-top: 300px;
