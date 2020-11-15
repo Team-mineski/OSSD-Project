@@ -151,9 +151,6 @@ else{
 
               <br>
 
-              <form action = "../../../" method = post>
-                  <button class="btn btn-outline-success mr-4" " name = "test"> Return to Main Menu </button>
-            </form>
             <div>
                   <button class="btn btn-outline-success mr-4" " name = "test" onclick="window.print();"> Print </button>
             </div>

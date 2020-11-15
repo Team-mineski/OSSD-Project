@@ -34,6 +34,7 @@ if (!(isset($_SESSION))){
   <div class = "container">
   <form action ="../../controllers/PatientForms/ExistingPatient.php" method = "post">
      <h5 class ="textStyle"> Tests: </h5>
+     
           <div class="form-row">
           
             <div class="ml-5">
@@ -43,7 +44,9 @@ if (!(isset($_SESSION))){
             <input type = 'checkbox' name = 'tests[]' value = 'ecg_request_table'>  <span class ="textStyle">: ECG </span>  <br>
             <input type = 'checkbox' name = 'tests[]' value = 'specimen_exam_request_table'> <span class ="textStyle">: Specimen Examination</span> <br>
             <input type = 'checkbox' name = 'tests[]' value = 'microbio_request_table'> <span class ="textStyle"> : Microbiology Request</span><br>
+            
             </div>
+
           </div>
         <br>
 
