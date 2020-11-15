@@ -143,7 +143,7 @@ $test_date=$_SESSION['request_date'];
 
             <div class="form-group " >
                 <label for="address" > Relevant clinical history and diagnosis :</label> 
-                <textarea  id="address" cols="" rows="2" class="form-control form-control-sm" name="clinical_history"><?php echo $patient->getDiagnosis();?></textarea>
+                <textarea  id="address" cols="" rows="2" class="form-control form-control-sm" name="clinical_history" readonly><?php echo $patient->getDiagnosis();?></textarea>
             </div>
 
             <hr class="newhr"> 
@@ -335,14 +335,14 @@ $test_date=$_SESSION['request_date'];
                             <div class="form-group ">
                             
                                 <label for="offname"> Officer :</label>
-                                <input type="text" name="offname" id="offname" class="form-control form-control-sm ">
+                                <input type="text" name="offname" id="offname" class="form-control form-control-sm " required>
                             
                             </div>
 
 
                             <div class="form-group w-25" >
                                 <label for="Date">Date :</label> 
-                                <input type="date" name="Date" id="Date" max=<?php echo date('Y-m-d');?> class="form-control form-control-sm">
+                                <input type="date" name="Date" id="Date" max=<?php echo date('Y-m-d');?> class="form-control form-control-sm" required>
                             </div>                            
 
                         </td>
@@ -352,19 +352,19 @@ $test_date=$_SESSION['request_date'];
 
                             <div class="form-group w-50" >
                                 <label for="Date2">Date :</label> 
-                                <input type="date" name="Date2" id="Date2" max=<?php echo date('Y-m-d');?> class="form-control form-control-sm">
+                                <input type="date" name="Date2" id="Date2" max=<?php echo date('Y-m-d');?> class="form-control form-control-sm" required>
                             </div> 
 
                             <div class="form-group w-50">
                                 <label for="time1"> Time :</label>
-                                <input type="time" name="time1" id="time1" class="form-control form-control-sm" >
+                                <input type="time" name="time1" id="time1" class="form-control form-control-sm" reqiored>
             
                             </div>
 
                             <div class="form-group ">
                             
                                 <label for="offname2"> Name :</label>
-                                <input type="text" name="offname2" id="offname2" class="form-control form-control-sm ">
+                                <input type="text" name="offname2" id="offname2" class="form-control form-control-sm " required>
                             
                             </div>
    
@@ -386,13 +386,13 @@ $test_date=$_SESSION['request_date'];
             <div class="row text-left ">
                 <div class="col ">
                     <div class="form-group w-50">
-                        <input type="date" class="form-control" max=<?php echo date('Y-m-d');?> name="datefinal">
+                        <input type="date" class="form-control" max=<?php echo date('Y-m-d');?> name="datefinal" required>
                     </div>
                 </div>
 
                 <div class="col ">
                     <div class="form-group w-50 ">
-                        <input type="time" class="form-control" name="timefinal">
+                        <input type="time" class="form-control" name="timefinal" required>
                     </div>
                 </div>
 
