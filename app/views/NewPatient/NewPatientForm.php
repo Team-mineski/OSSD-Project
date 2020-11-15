@@ -1,9 +1,7 @@
 <?php
  include '../layouts/docmenu.php';
-//include '../HeaderAndFooter/header.php';
 include '../../models/DatabaseConnection/Database.php';
 include '../../classes/Patient.php';
-// include '../../cache.php';
 
 if (!(isset($_SESSION))){
   session_start();
