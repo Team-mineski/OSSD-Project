@@ -49,7 +49,6 @@ class Database{
     }
 
     public function insertTable($table){
-        //insert TestInboxTable object in to the tables
         $this->table_list[]=$table;
     }
 

@@ -2,26 +2,18 @@
 require_once 'pdo.php';
 class Database{
     private $name = "hospital";   //Database name
-    private $host = "localhost";    //Database server
-    private $user = "root";  //Database username
-    private $password ="" ;    //Database password
+    // private $host = "localhost";    //Database server
+    // private $user = "gayangi";  //Database username
+    // private $password ="Pswrd" ;    //Database password
     var $pdo ;
     private static $instance;
-    private static $link;
+    // private static $link;
 
     private function __construct(){
-        $this->pdo = new PDO("mysql:host=$this->host; port = 3306; dbname = $this->name", "$this->user","$this->password");
-        $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //provide a description in case of errors
-        $this->createDatabase();
-    }
-
-    public function createDatabase(){
-        try{
-            $stmt = $this->pdo->exec("CREATE DATABASE IF NOT EXISTS $this->name;");
-            }
-            catch(PDOException $e) {
-                echo $e->getMessage();
-            }
+        // $this->pdo = new PDO("mysql:host=$this->host; port = 3306; dbname = $this->name", "$this->user","$this->password");
+        // $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //provide a description in case of errors
+        include 'pdo.php';
+        $this->pdo = $pdo;
     }
 
     public static function getInstance(){
