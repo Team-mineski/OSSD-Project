@@ -1,9 +1,7 @@
 <?php
-include '../layouts/docmenu.php';
-include '../../classes/Patient.php';
-include '../HeaderAndFooter/header.php';
-include '../HeaderAndFooter/Discharged.php';
-include '../../models/DatabaseConnection/Database.php';
+include_once '../../classes/Patient.php';
+include_once '../HeaderAndFooter/Discharged.php';
+include_once '../../models/DatabaseConnection/Database.php';
 
 if (!(isset($_SESSION))){
   session_start();
@@ -47,8 +45,8 @@ if (!(isset($_SESSION))){
     $patient->goNext();
     $diagnosis = $medical->getDiagnosisID($diagnosis);
     $medical->enterData("dischargedPatients", array('RegNo', 'FullName','Gender', 'FullAddress',
-      'DateOfBirth', 'DiagnosisID','BedNo','ContactNo'),
-      array($regNo,$name, $gender,$address,$dob,$diagnosis['DiagnosisID'],$bedNo, $contact));
+      'DateOfBirth', 'DiagnosisID','BedNo','ContactNo','DischargedDate'),
+      array($regNo,$name, $gender,$address,$dob,$diagnosis['DiagnosisID'],$bedNo, $contact, date('Y-m-d')));
     $medical->deleteData("patients", $patientID, "PatientID");
     $medical->moveData("history", "dischargedhistory", "RegNo", $regNo);
     $medical->deleteData("history", $regNo, "RegNo");

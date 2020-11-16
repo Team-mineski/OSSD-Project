@@ -1,18 +1,12 @@
 <?php
-require_once 'pdo.php';
+
 class Database{
-    private $name = "hospital";   //Database name
-    // private $host = "localhost";    //Database server
-    // private $user = "gayangi";  //Database username
-    // private $password ="Pswrd" ;    //Database password
+    private $name = "hospital"; 
     var $pdo ;
     private static $instance;
-    // private static $link;
 
     private function __construct(){
-        // $this->pdo = new PDO("mysql:host=$this->host; port = 3306; dbname = $this->name", "$this->user","$this->password");
-        // $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //provide a description in case of errors
-        include 'pdo.php';
+        include_once 'pdo.php';
         $this->pdo = $pdo;
     }
 
@@ -78,6 +72,7 @@ class Database{
             }
         }
         $sql = $sql.") ";
+        echo $sql;
         try
         {
             $stmt = $this->pdo->exec($sql);
@@ -329,6 +324,7 @@ class Database{
         {
             echo $e->getMessage();
         }
+        print_r ($result);
         return $result;
     }
 

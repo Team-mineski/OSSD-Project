@@ -148,12 +148,13 @@ if (isset($_POST['diagnosis'])) {
               }
           }
       }
+      echo $diagnosisID;
 
       $patient = new Patient($regNo, $name, $age, $address,$diagnosis,$dob,$gender,$status, $bed, $contact,"New");
       $_SESSION["Patient"]= $patient;
       $error = $medical->enterData("patients", array('RegNo', 'FullName', 'Gender', 'FullAddress',
       'DateOfBirth', 'DiagnosisID','BedNo','ContactNo'),
-      array($regNo,$name, $gender,$address,$dob,$diagnosis,  $bed, $contact));
+      array($regNo,$name, $gender,$address,$dob,$diagnosisID,  $bed, $contact));
 
       if ($error==false){
         $_SESSION["Recheck"]= "Please recheck the data you entered";
@@ -172,10 +173,9 @@ if (isset($_POST['diagnosis'])) {
                 $class_name = ucfirst($test);
                 $command = new $class_name; //command design pattern
                 $command->execute($medical,array($regNo, date('Y-m-d')));
-            //$medical->enterData($test, array('patient_id','sdate'), array($regNo, date('Y-m-d')));
+            $medical->enterData($test, array('patient_id','sdate'), array($regNo, date('Y-m-d')));
           }
         }
-    //header("Location: ../../../");
     $patient->displayUI();
       }
 

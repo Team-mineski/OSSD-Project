@@ -139,7 +139,7 @@ if (!(isset($_SESSION))){
 
           <!-- <div class="ml-5"> -->
             <div class="col-md-3">
-            <legend class="col-form-label col-sm-2 pt-0 textStyle">Admitted </legend>
+            <legend class="col-form-label col-sm-2 pt-0 textStyle" required>Admitted </legend>
                       <input type="radio" onclick="javascript:yesnoCheck();" name="admitted" id="yesCheck" value = 'true' required> <span class ="textStyle">Yes</span><br>
                       <input type="radio" onclick="javascript:yesnoCheck();" name="admitted" id="noCheck" value='false'> <span class ="textStyle">No</span><br>
                   <div id="ifYes" style="visibility:hidden" class ="textStyle ">
