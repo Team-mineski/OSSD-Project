@@ -15,6 +15,3 @@ class Restricted extends Controller
     $this->view->render('restricted/index');
   }
 }
-
-
- ?>

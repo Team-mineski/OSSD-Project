@@ -241,7 +241,6 @@ class Database{
         if (!(mysqli_query($link, $sql))) {
             echo "ERROR: Was not able to execute $sql. " . mysqli_error($link);
         }
-
     }
 }
 
