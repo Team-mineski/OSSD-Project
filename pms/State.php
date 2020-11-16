@@ -60,7 +60,7 @@ class DischargedPatient extends State
 
     public function displayUI($patient)
     {
-        //include 'FormDischargedPatient.php';
+
         $regNo = $patient->getRegNo();
         $name = $patient->getName();
         $age = $patient->getAge();
