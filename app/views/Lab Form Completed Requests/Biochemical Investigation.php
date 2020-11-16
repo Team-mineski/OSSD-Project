@@ -3,10 +3,9 @@ include '../layouts/docmenu.php';
 include '../../models/DatabaseConnection/Database.php';
 include '../../classes/Patient.php';
 
-if (!(isset($_SESSION))){
+if (!(isset($_SESSION))) {
   session_start();
-  if ((!(isset($_SESSION["username"])))||($_SESSION["type"]!="Doctor"))
-  {
+  if ((!(isset($_SESSION["username"]))) || ($_SESSION["type"] != "Doctor")) {
     header("Location: ../../../restricted/index");
     return;
   }
@@ -15,43 +14,44 @@ if (!(isset($_SESSION))){
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <script src="../../../js/jQuery-2.2.4.min.js"></script>
-    <script src="../../../bootstrap/js/bootstrap.min.js"></script>
-    <link rel = "stylesheet" href = "../../../bootstrap/css/bootstrap.min.css" integrity="" crossorigin="anonymous">
-    <link rel = "stylesheet" href = "../../../css/navNsideStyles.css">
-    <link rel = "stylesheet" href = "../../../css/mainStyles.css">
-    <!-- <link rel = "stylesheet" href = "../../../style.css">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="../../../js/jQuery-2.2.4.min.js"></script>
+  <script src="../../../bootstrap/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../../../bootstrap/css/bootstrap.min.css" integrity="" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../../css/navNsideStyles.css">
+  <link rel="stylesheet" href="../../../css/mainStyles.css">
+  <!-- <link rel = "stylesheet" href = "../../../style.css">
     <link rel = "stylesheet" href = "../../../css/styles.css"> -->
 
-    <title></title>
-  </head>
-  <body class="mainbody ">
-  <div class = "container">
+  <title></title>
+</head>
+
+<body class="mainbody ">
+  <div class="container">
 
 
-      <form action ="" method = "post">
+    <form action="" method="post">
 
-    <table class="table table-bordered" >
-    <thead>
-      <tr>
-          <th style="text-align:center" scope="col" class ="textStyle"><b>Test Request Date</b> </th>
-          <th style="text-align:center" scope="col" class ="textStyle"> <b>Test Results</b> </th>
-      </tr>
-    </thead>
-    <tbody>
-    </form >
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th style="text-align:center" scope="col" class="textStyle"><b>Test Request Date</b> </th>
+            <th style="text-align:center" scope="col" class="textStyle"> <b>Test Results</b> </th>
+          </tr>
+        </thead>
+        <tbody>
+    </form>
     <?php
-        $medical = Database::getInstance();
-        $results =  $medical->retrieveData("biochemical_table", array('test_request_date'), $_SESSION["regNo"]);
-        if (sizeof($results)!=0) {
-          foreach ($results as $row)
-          {
-                $date =  $row['test_request_date']; //THIS NEEDS TO BE THE COMPLETED DATE NOT THE REQUESTED DATE
-                echo 
-            "
+    $medical = Database::getInstance();
+    $results =  $medical->retrieveData("biochemical_table", array('test_request_date'), $_SESSION["regNo"]);
+    if (sizeof($results) != 0) {
+      foreach ($results as $row) {
+        $date =  $row['test_request_date']; //THIS NEEDS TO BE THE COMPLETED DATE NOT THE REQUESTED DATE
+        echo
+          "
             <tr>
             <form action = \"../../views/Lab Forms/Biochemical Investigation.php\" method = post>
                 <td style=\"text-align:center\"> <input type=\"text\"  name = \"date\" value=$date readonly class ='boxstyles'/> </td>
@@ -60,23 +60,21 @@ if (!(isset($_SESSION))){
                 </form>
                 </td>
                 </tr>";
-        }
-        echo "<tbody>";
-        echo "</table>";
-        
+      }
+      echo "<tbody>";
+      echo "</table>";
     }
-      
 
-      
+
+
 
     ?>
-    
 
 
 
-    
-    </div>
-  </body>
-  
+
+
+  </div>
+</body>
+
 </html>
-

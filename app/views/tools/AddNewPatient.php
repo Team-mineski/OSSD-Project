@@ -1,7 +1,7 @@
 <?php $this->setSiteTitle('New Patient'); ?>
 <?php $this->start('body'); ?>
 
-<div >
+<div>
   <h1 class="text-center top"> Add a new Patient </h1>
 </div>
 

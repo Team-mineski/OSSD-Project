@@ -2,26 +2,23 @@
 
 <?php $this->start('body'); ?>
 
-
-
-
 <div class="imageview">
-<div class="welcomeHeading text-center">
+  <div class="welcomeHeading text-center">
 
-	<?php if (currentUser()) {
-    echo "<h1 style=\"margin-top:15px\"> Welcome back,</h1><div>";
-    echo "<h2 style=\" color:#FEA736; \">";
-    echo currentUser()->username;
-    echo "</h2></div>";
-  }else {
-  echo "<h1 style=\"margin-top:15px\"> Welcome to the <div>website </div></h1>";
-  }
+    <?php if (currentUser()) {
+      echo "<h1 style=\"margin-top:15px\"> Welcome back,</h1><div>";
+      echo "<h2 style=\" color:#FEA736; \">";
+      echo currentUser()->username;
+      echo "</h2></div>";
+    } else {
+      echo "<h1 style=\"margin-top:15px\"> Welcome to the <div>website </div></h1>";
+    }
 
-  ?>
- 
-  
+    ?>
 
-</div>
+
+
+  </div>
 </div>
 
 <?php $this->end(); ?>
