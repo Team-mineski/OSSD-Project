@@ -12,26 +12,26 @@ include_once "BiochemicalRequestTable.model.php";
 include_once "SpecimenExamRequestTable.model.php";
 
 session_start();
-if (!(isset($_SESSION["username"]))){
+if (!(isset($_SESSION["username"]))) {
     header("Location: ../register/login");
     return;
-  }
+}
 
-$requests=$_SESSION['requests'];
+$requests = $_SESSION['requests'];
 
 $database = Database::getInstance();
-$request_index=$_POST['test_request'];     // getting index of selected test in array of requests
-$request=$requests[$request_index];     //getting relavent request object
-$patient_id=$request->getPatientID();         //requested patient's id
+$request_index = $_POST['test_request'];     // getting index of selected test in array of requests
+$request = $requests[$request_index];     //getting relavent request object
+$patient_id = $request->getPatientID();         //requested patient's id
 echo $patient_id;
-$test_type=$request->getTable()->getTestType();
-$request_date=$request->getDate();
+$test_type = $request->getTable()->getTestType();
+$request_date = $request->getDate();
 
-$patient_table=new PatientTable($database);      // initiating a new Patient Table
-$patient=$patient_table->getPatientByID($patient_id);     //get requested patient details from database as patient object
-$_SESSION['patient']=serialize($patient);
-$_SESSION['request_date']=$request_date;
-switch($test_type){
+$patient_table = new PatientTable($database);      // initiating a new Patient Table
+$patient = $patient_table->getPatientByID($patient_id);     //get requested patient details from database as patient object
+$_SESSION['patient'] = serialize($patient);
+$_SESSION['request_date'] = $request_date;
+switch ($test_type) {
     case "xray":
         header("Location:XrayReport.viewer.php");
         break;
@@ -48,9 +48,3 @@ switch($test_type){
         header("Location:SpecimenExam.viewer.php");
         break;
 }
-
-
-
-
-
-?>

@@ -3,13 +3,16 @@
 include_once "LabAssistant.class.php";
 include_once "Database.model.php";
 
-class Factory{
+class Factory
+{
     private $database;
-    public function __construct($database){
-        $this->database=$database;
+    public function __construct($database)
+    {
+        $this->database = $database;
     }
-    public function makeTestRequestTable($lab_assistant){
-        switch($lab_assistant->getLAType()){
+    public function makeTestRequestTable($lab_assistant)
+    {
+        switch ($lab_assistant->getLAType()) {
             case XrayRequestTable::$allowed_la:
                 return new XrayRequestTable($this->database);
                 break;
@@ -26,16 +29,5 @@ class Factory{
                 return new SpecimenExamRequestTable($this->database);
                 break;
         }
-
-    
-    
     }
-
 }
-
-
-
-
-
-
-?>
