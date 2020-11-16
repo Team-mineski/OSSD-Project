@@ -50,9 +50,9 @@ if (!(isset($_SESSION))) {
               <form method=\"post\" action=\"../../controllers/DischargedPatient/AlreadyDischargedPatient.php\">
                 <tr>
 
-                <td style=\"text-align:center\">  <input type=\"text\" name=\"date\" class=\"form-control w-50\" value=\"$dateOfDischarge\" readonly>  </td>
-                <td style=\"text-align:center\">  <input type=\"text\" style=\"text-align:center\" class=\"form-control w-50\" name=\"RegNo\" value=$regNo readonly>  </td>
-                <td style=\"text-align:center\">  <input type=\"submit\" name=\"action\" value=\"View Patient File\" class='btn btn-outline-success'/>  </td>
+                <td align =\"center\" > <input type=\"text\" name=\"date\" class=\"form-control  w-50\" value=\"$dateOfDischarge\" readonly>  </td>
+                <td align =\"center\">  <input type=\"text\" style=\"text-align:center\" class=\"form-control w-50\" name=\"RegNo\" value=$regNo readonly>  </td>
+                <td align =\"center\">  <input type=\"submit\" name=\"action\" value=\"View Patient File\" class='btn btn-outline-success'/>  </td>
                 
                 </tr>
               </form>
