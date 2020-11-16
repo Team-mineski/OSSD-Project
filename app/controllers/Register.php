@@ -120,7 +120,3 @@ class Register extends Controller
   }
 
 }
-
-
-
- ?>

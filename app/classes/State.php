@@ -62,9 +62,8 @@ class DischargedPatient extends State{
         $contact = $patient->getContact();
         $bedNo = $patient->getBedNo();
 
-        include "./FormDischargedPatient.php";
+        include "../../views/DischargedPatient/FormDischargedPatient.php";
         
         
     }
 }
-?>

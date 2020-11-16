@@ -57,6 +57,3 @@ class Redirect extends Controller
 
 
 }
-
-
- ?>
