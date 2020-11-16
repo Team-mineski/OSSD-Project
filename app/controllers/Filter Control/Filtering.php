@@ -1,56 +1,52 @@
-
 <?php
 include '../../views/layouts/docmenu.php';
-  include '../../models/DatabaseConnection/Database.php';
-  include '../../models/Validation.php';
-  include '../../classes/Patient.php';
+include '../../models/DatabaseConnection/Database.php';
+include '../../models/Validation.php';
+include '../../classes/Patient.php';
 
-  if (!(isset($_SESSION))){
-    session_start();
-    if ((!(isset($_SESSION["username"])))||($_SESSION["type"]!="Doctor"))
-    {
-      header("Location: ../restricted/index");
-      return;
-    }
+if (!(isset($_SESSION))) {
+  session_start();
+  if ((!(isset($_SESSION["username"]))) || ($_SESSION["type"] != "Doctor")) {
+    header("Location: ../restricted/index");
+    return;
   }
+}
 
-    ?>
+?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
+
+<head>
   <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <script src="../../../js/jQuery-2.2.4.min.js"></script>
-    <script src="../../../bootstrap/js/bootstrap.min.js"></script>
-    <link rel = "stylesheet" href = "../../../bootstrap/css/bootstrap.min.css" integrity="" crossorigin="anonymous">
-    <link rel = "stylesheet" href = "../../../css/navNsideStyles.css">
-    <link rel = "stylesheet" href = "../../../css/mainStyles.css">
-  </head>
-  <body class="mainbody">
-  <div class = "container">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="../../../js/jQuery-2.2.4.min.js"></script>
+  <script src="../../../bootstrap/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../../../bootstrap/css/bootstrap.min.css" integrity="" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../../css/navNsideStyles.css">
+  <link rel="stylesheet" href="../../../css/mainStyles.css">
+</head>
 
-  <?php
-  if(isset($_POST["diagnosis"])){
-    $diagnosis = htmlentities($_POST["diagnosis"]);
-    $_SESSION["diagnosis"] = $diagnosis;
-  }
-  else{
-    if(isset($_SESSION["diagnosis"])){
-      $diagnosis = $_SESSION["diagnosis"];
+<body class="mainbody">
+  <div class="container">
+
+    <?php
+    if (isset($_POST["diagnosis"])) {
+      $diagnosis = htmlentities($_POST["diagnosis"]);
+      $_SESSION["diagnosis"] = $diagnosis;
+    } else {
+      if (isset($_SESSION["diagnosis"])) {
+        $diagnosis = $_SESSION["diagnosis"];
+      }
     }
-  }
-    // echo "Diagnosis selected : $diagnosis";
-     echo"<br>";
-     echo "<h5 class =\"textStyle\">Diagnosis selected : $diagnosis</h5> ";
+    echo "<br>";
+    echo "<h5 class =\"textStyle\">Diagnosis selected : $diagnosis</h5> ";
     $medical = Database::getInstance();
-    $columns = array('RegNo', 'FullName', 'Gender', 'FullAddress', 'DateOfBirth', 'Disease',  'BedNo','ContactNo');
-    //$results =  $medical->retrieveData("patients", $columns, $regNo);
-    $results =  $medical->filterDataByDiagnosis( "diseases",$columns, $diagnosis);
+    $columns = array('RegNo', 'FullName', 'Gender', 'FullAddress', 'DateOfBirth', 'Disease',  'BedNo', 'ContactNo');
+    $results =  $medical->filterDataByDiagnosis("diseases", $columns, $diagnosis);
 
 
-    if (sizeof($results)!=0) 
-    {
+    if (sizeof($results) != 0) {
       echo "<table class=\"table table-bordered\" >
       <thead>
         <tr>
@@ -62,8 +58,7 @@ include '../../views/layouts/docmenu.php';
         </tr>
       </thead>
       <tbody>";
-      foreach ($results as $row)
-      {
+      foreach ($results as $row) {
         $regNo = $row['RegNo'];
         $name = $row['FullName'];
         $dob =  $row['DateOfBirth'];
@@ -74,18 +69,16 @@ include '../../views/layouts/docmenu.php';
         $y = $diff->y;
         $m = $diff->m;
         $d = $diff->d;
-        if ($y!=0){
+        if ($y != 0) {
           $age = $y . " year/s";
-        }
-        else if ($m!=0){
-          $age = $m . " month/s ".$d." day/s";
-        }
-        else {
+        } else if ($m != 0) {
+          $age = $m . " month/s " . $d . " day/s";
+        } else {
           $age = $d . " day/s";
         }
         $gender =  $row['Gender'];
-        echo 
-            "
+        echo
+          "
             <form method=\"post\" action=\"../PatientForms/ExistingTreatmentsFiltered.php\">
             <tr>
               <td > <input type=\"text\" style=\"text-align:center\" class=\"form-control boxstyles\" name=\"regNo\" value=$regNo readonly/> </td>
@@ -97,24 +90,20 @@ include '../../views/layouts/docmenu.php';
             
             ";
       }
-  }
-    else
-    {
+    } else {
       echo "<br>";
       echo "<h4 align = 'center' class =\"textStyle\">Selected diagnosis not available in any patients in the database</h4> ";
-    
     }
 
 
-  ?>
-</div>
+    ?>
+  </div>
   <script>
-        if ( window.history.replaceState ) {
-            window.history.replaceState( null, null, window.location.href );
-        }
+    if (window.history.replaceState) {
+      window.history.replaceState(null, null, window.location.href);
+    }
+  </script>
 
-</script>
-      
-  </body>
+</body>
+
 </html>
-

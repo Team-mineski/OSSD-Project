@@ -72,7 +72,7 @@ class Database{
             }
         }
         $sql = $sql.") ";
-        echo $sql;
+        // echo $sql;
         try
         {
             $stmt = $this->pdo->exec($sql);
@@ -324,12 +324,10 @@ class Database{
         {
             echo $e->getMessage();
         }
-        print_r ($result);
         return $result;
     }
 
     function retrieveAllData( $table){
-        //$link = $this->makeLink();
         $stmt = $this->pdo->exec("USE $this->name");
         $sql = "SELECT * FROM ".$this->name.'.'.$table;
         try
@@ -378,5 +376,3 @@ class Database{
         
     }
 }
-
-?>
