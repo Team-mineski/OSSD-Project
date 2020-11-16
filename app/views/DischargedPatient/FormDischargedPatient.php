@@ -1,8 +1,6 @@
 <?php
-include '../layouts/docmenu.php';
-include '../../views/HeaderAndFooter/header.php';
-include '../../models/DatabaseConnection/Database.php';
-include '../HeaderAndFooter/Discharged.php';
+
+include_once '../HeaderAndFooter/Discharged.php';
 
 if (!(isset($_SESSION))){
   session_start();
@@ -45,7 +43,7 @@ if (!(isset($_SESSION))){
           </div>
 
           <div class="ml-5">
-            <div class="col-md-7 mb-3 col-md-offset-4 mr-3">
+            <div class="col-md-15 mb-3 col-md-offset-4 mr-3">
                 <label for="age">Age</label>
                 <input type="text" class="form-control" id="age" name="age" placeholder="Age" value='<?php echo  $patient->getAge();?>' readonly>          
             </div>
@@ -105,12 +103,3 @@ if (!(isset($_SESSION))){
           ?>
         </div>
         <br>
-        <button type="button" class="btn btn-primary mr-4" onclick="window.location.href = '../../../';">Return to Main Menu</button>
-        <!--
-        <div class="form-row">
-          <button type="button" class="btn btn-primary mr-4" onclick="window.location.href = 'DischargedPatientHistory.php';">History</button>
-          <button type="button" class="btn btn-primary mr-4" onclick="window.location.href = 'DischargedPatientTestResults.php';">Test Results</button>
-          
-
-          </div>
-          -->

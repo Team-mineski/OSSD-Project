@@ -31,6 +31,7 @@ if (!(isset($_SESSION))){
     <br>
     <thead>
       <tr>
+          <th  style="text-align:center" scope="col" class="textStyle"><b>Date Discharged</b> </th>
           <th  style="text-align:center" scope="col" class="textStyle"><b>Patient ID</b> </th>
           <th style="text-align:center" scope="col" class="textStyle"> <b>Patient File</b> </th>
       </tr>
@@ -43,12 +44,16 @@ if (!(isset($_SESSION))){
             foreach($results as $row)
             {
               $regNo = $row['RegNo'];
+              $dateOfDischarge = $row['DischargedDate'];
               echo
               "
               <form method=\"post\" action=\"AlreadyDischargedPatient.php\">
                 <tr>
+
+                <td style=\"text-align:center\">  <input type=\"text\" name=\"date\" class=\"form-control w-50\" value=\"$dateOfDischarge\" readonly>  </td>
                 <td style=\"text-align:center\">  <input type=\"text\" style=\"text-align:center\" class=\"form-control w-50\" name=\"RegNo\" value=$regNo readonly>  </td>
                 <td style=\"text-align:center\">  <input type=\"submit\" name=\"action\" value=\"View Patient File\" class='btn btn-outline-success'/>  </td>
+                
                 </tr>
               </form>
               ";

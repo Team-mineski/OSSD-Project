@@ -12,9 +12,9 @@
         "VARCHAR(50) NOT NULL", "DATE NOT NULL","INT", "VARCHAR(30) NOT NULL","VARCHAR(15) NOT NULL"," FOREIGN KEY (DiagnosisID) REFERENCES diseases(DiagnosisID) ON DELETE CASCADE" ));
 
         $medical -> makeTable("dischargedPatients",array('DischargedPatientID','RegNo', 'FullName', 'Gender', 'FullAddress', 'DateOfBirth', 
-        'DiagnosisID', 'BedNo','ContactNo') ,
+        'DiagnosisID', 'BedNo','ContactNo','DischargedDate') ,
         array("INT NOT NULL PRIMARY KEY AUTO_INCREMENT","VARCHAR(20) NOT NULL", "VARCHAR(70) NOT NULL", "VARCHAR(10) NOT NULL",
-        "VARCHAR(50) NOT NULL", "DATE NOT NULL", "INT NOT NULL","VARCHAR(10)","VARCHAR(15) NOT NULL" ));
+        "VARCHAR(50) NOT NULL", "DATE NOT NULL", "INT NOT NULL","VARCHAR(10)","VARCHAR(15) NOT NULL", "DATE NOT NULL" ));
 
         $columns = array('ID','RegNo','Date','ClinicalSignsPresented', 'PrescribedDrugs', 'AdditionalNotes');
         $attributes = array('INT PRIMARY KEY NOT NULL AUTO_INCREMENT', 'VARCHAR(20) NOT NULL',' DATE NOT NULL',

@@ -61,9 +61,9 @@ $arr = explode ("/", $regNo);  //get the patient id from the registration number
 $patientID = $arr[1];
 $_SESSION["PatientID"] = $patientID;
 $columns = array('RegNo', 'FullName', 'Gender', 'FullAddress', 'DateOfBirth', 'Disease',  'BedNo','ContactNo');
-//$results =  $medical->retrieveData("patients", $columns, $regNo);
 $results =  $medical->joinPatientWithDiagnosis("patients",$columns, "PatientID", $patientID);
-if (($results)) {
+echo $results;
+if ($results) {
       $regNo = $results['RegNo'];
       $diagnosis =  $results['Disease'];
       $name = $results['FullName'];
@@ -106,7 +106,7 @@ if (($results)) {
 
 else{
   $_SESSION['error'] = "Registration number not found";
-  header("Location: ../../views/Searching.php");
+  // header("Location: ../../views/Searching.php");
   return;
 }
           ?>
