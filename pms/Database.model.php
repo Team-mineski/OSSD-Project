@@ -3,8 +3,8 @@
 class Database{
     private $name = "hospital";   //Database name
     private $host = "localhost";    //Database server
-    private $user = "gayangi";  //Database username
-    private $password = "Pswrd";    //Database password
+    private $user = "root";  //Database username
+    private $password = "";    //Database password
     private static $instance;
     private static $link;
 
