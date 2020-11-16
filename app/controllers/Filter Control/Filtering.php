@@ -39,12 +39,10 @@ if (!(isset($_SESSION))) {
         $diagnosis = $_SESSION["diagnosis"];
       }
     }
-    // echo "Diagnosis selected : $diagnosis";
     echo "<br>";
     echo "<h5 class =\"textStyle\">Diagnosis selected : $diagnosis</h5> ";
     $medical = Database::getInstance();
     $columns = array('RegNo', 'FullName', 'Gender', 'FullAddress', 'DateOfBirth', 'Disease',  'BedNo', 'ContactNo');
-    //$results =  $medical->retrieveData("patients", $columns, $regNo);
     $results =  $medical->filterDataByDiagnosis("diseases", $columns, $diagnosis);
 
 
