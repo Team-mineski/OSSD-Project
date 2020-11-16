@@ -106,7 +106,7 @@ if ($results) {
 
 else{
   $_SESSION['error'] = "Registration number not found";
-  // header("Location: ../../views/Searching.php");
+  header("Location: ../../views/Searching.php");
   return;
 }
           ?>
