@@ -2,7 +2,7 @@
 include '../layouts/docmenu.php';
 include './HeaderAndFooter/header.php';
 include '../models/DatabaseConnection/Database.php';
-include '../cache.php';
+
 if (!(isset($_SESSION))) {
   session_start();
   if ((!(isset($_SESSION["username"]))) || ($_SESSION["type"] != "Doctor")) {

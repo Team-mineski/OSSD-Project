@@ -7,51 +7,61 @@ abstract class State
     abstract public function displayUI($patient);
 }
 
-class NewPatient extends State{
+class NewPatient extends State
+{
 
-    function __construct($remark){
+    function __construct($remark)
+    {
         $this->remark = $remark;
     }
 
-    public function goNext($patient): void{
+    public function goNext($patient): void
+    {
         $patient->setState(new ExistingPatient("Existing Patient"));
-
     }
 
-    public function displayUI($patient){
+    public function displayUI($patient)
+    {
         header("Location: ../../views/ExistingPatient/ExistingPatientForm.php");
         return;
     }
 }
 
-class ExistingPatient extends State{
+class ExistingPatient extends State
+{
 
-    function __construct($remark){
+    function __construct($remark)
+    {
         $this->remark = $remark;
     }
 
-    public function goNext($patient): void{
+    public function goNext($patient): void
+    {
         $patient->setState(new DischargedPatient("Discharged Patient"));
-
     }
 
-    public function displayUI($patient){
+    public function displayUI($patient)
+    {
         header("Location: ../../views/ExistingPatient/ExistingPatientForm.php");
         return;
     }
 }
 
-class DischargedPatient extends State{
+class DischargedPatient extends State
+{
 
-    function __construct($remark){
+    function __construct($remark)
+    {
         $this->remark = $remark;
     }
 
-    public function goNext($patient): void{
+    public function goNext($patient): void
+    {
         $this->remark = "Patient has already been discharged";
     }
 
-    public function displayUI($patient){
+    public function displayUI($patient)
+    {
         $regNo = $patient->getRegNo();
         $name = $patient->getName();
         $age = $patient->getAge();
@@ -61,9 +71,7 @@ class DischargedPatient extends State{
         $diagnosis = $patient->getDiagnosis();
         $contact = $patient->getContact();
         $bedNo = $patient->getBedNo();
-
-        include "../../views/DischargedPatient/FormDischargedPatient.php";
-        
-        
+        header("Location: ../../views/DischargedPatient/DischargedPatientForm.php");
+        return;
     }
 }

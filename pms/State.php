@@ -70,6 +70,6 @@ class DischargedPatient extends State
         $diagnosis = $patient->getDiagnosis();
         $contact = $patient->getContact();
         $bedNo = $patient->getBed();
-        include $_SERVER['DOCUMENT_ROOT'] . "/Medical/views/DischargedPatient/FormDischargedPatient.php";
+        include $_SERVER['DOCUMENT_ROOT'] . "/Medical/views/DischargedPatient/DischargedPatientForm.php";
     }
 }

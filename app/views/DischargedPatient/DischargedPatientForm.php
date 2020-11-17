@@ -1,5 +1,8 @@
 <?php
-
+include '../../classes/Patient.php';
+include '../layouts/docmenu.php';
+include_once '../HeaderAndFooter/Discharged.php';
+include '../../models/DatabaseConnection/Database.php';
 
 if (!(isset($_SESSION))) {
   session_start();
@@ -8,6 +11,7 @@ if (!(isset($_SESSION))) {
     return;
   }
 }
+$patient = $_SESSION['Patient'];
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -16,7 +20,10 @@ if (!(isset($_SESSION))) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="../../../bootstrap/css/bootstrap.min.css" integrity="" crossorigin="anonymous">
-
+  <script src="../../../js/jQuery-2.2.4.min.js"></script>
+  <script src="../../../bootstrap/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../../../bootstrap/css/bootstrap.min.css" integrity="" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../../css/navNsideStyles.css">
   <link rel="stylesheet" href="../../../css/mainStyles.css">
   <title></title>
 </head>
@@ -101,5 +108,15 @@ if (!(isset($_SESSION))) {
         </div>";
         }
         ?>
+      </div>
+      <div class="form-row">
+        <form action="DischargedPatientTestResults.php" method="">
+          <input class="btn btn-outline-success mr-4" type="submit" name="tests" value="Test Results" />
+        </form>
+
+        <form action="DischargedPatientHistory.php" method="">
+          <input class="btn btn-outline-success mr-4" type="submit" name="history" value="History" />
+        </form>
+        <br>
       </div>
       <br>
