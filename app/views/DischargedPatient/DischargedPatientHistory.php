@@ -1,16 +1,10 @@
 <?php
-include '../layouts/docmenu.php';
-include '../../views/HeaderAndFooter/header.php';
-include '../../models/DatabaseConnection/Database.php';
-include '../HeaderAndFooter/Discharged.php';
 
-if (!(isset($_SESSION))) {
-  session_start();
-  if ((!(isset($_SESSION["username"]))) || ($_SESSION["type"] != "Doctor")) {
-    header("Location: ../../../restricted/index");
-    return;
-  }
-}
+include '../../classes/Patient.php';
+include '../layouts/docmenu.php';
+include '../../controllers/DischargedPatient/DischargedPatientHistory.php';
+include_once '../HeaderAndFooter/Discharged.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -18,12 +12,14 @@ if (!(isset($_SESSION))) {
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="../../../bootstrap/css/bootstrap.min.css" integrity="" crossorigin="anonymous">
   <script src="../../../js/jQuery-2.2.4.min.js"></script>
   <script src="../../../bootstrap/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="../../../bootstrap/css/bootstrap.min.css" integrity="" crossorigin="anonymous">
   <link rel="stylesheet" href="../../../css/navNsideStyles.css">
   <link rel="stylesheet" href="../../../css/mainStyles.css">
-  <title> </title>
+  <title></title>
 </head>
 
 <body class='mainbody'>
@@ -39,14 +35,7 @@ if (!(isset($_SESSION))) {
       </thead>
       <tbody>
         <?php
-        $medical = Database::getInstance();
-        $columns = array('RegNo', 'Date', 'ClinicalSignsPresented', 'PrescribedDrugs', "AdditionalNotes");
-        if (isset($_SESSION["RegNo"])) {
-          $regNo = $_SESSION["RegNo"];
-        }
-
-        $results =  $medical->retrieveData("dischargedhistory", $columns, $regNo);
-
+        $results = $_SESSION["results"];
         if (sizeof($results) != 0) {
           foreach ($results as $row) {
             $date = $row['Date'];
