@@ -113,8 +113,6 @@ if (isset($_SESSION["Patient"])) {
         
         </div>";
         }
-        //../../view/DischargedPatient/ConfirmDischarge.php
-        //<button class="btn btn-outline-primary mr-4" type = "submit" name = "test"> Discharge Patient </button>
         ?>
       </div>
 
