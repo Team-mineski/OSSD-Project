@@ -1,5 +1,4 @@
 <?php
-
 class Database
 {
     private $name = "hospital";
@@ -13,7 +12,8 @@ class Database
     }
 
     public static function getInstance()
-    { {
+    { 
+        {
             if (self::$instance == null) {
                 self::$instance = new Database();
             }
