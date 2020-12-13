@@ -1,5 +1,4 @@
 <?php
-
 class Database
 {
     private $name = "hospital";
@@ -13,7 +12,8 @@ class Database
     }
 
     public static function getInstance()
-    { {
+    { 
+        {
             if (self::$instance == null) {
                 self::$instance = new Database();
             }
@@ -108,19 +108,7 @@ class Database
     }
 
 
-    // function getLastRecord($table)
-    // {
-    //     $stmt = $this->pdo->exec("USE $this->name");
-    //     $sql = "SELECT * FROM  $this->name.$table ORDER BY RegNo DESC LIMIT 1";
-    //     try {
-    //         $stmt = $this->pdo->prepare($sql);
-    //         $stmt->execute();
-    //         $result = $stmt->fetch();
-    //     } catch (PDOException $e) {
-    //         echo $e->getMessage();
-    //     }
-    //     return $result;
-    // }
+
 
     function deleteData($table, $patientID, $category)
     {
@@ -145,26 +133,7 @@ class Database
         }
     }
 
-    // function checkQuery($table, $columns, $regNo)
-    // {
-    //     $stmt = $this->pdo->exec("USE $this->name");
-    //     $sql = "SELECT ";
-    //     for ($i = 0; $i < count($columns); $i++) {
-    //         $sql = $sql . $columns[$i];
-    //         if ($i != (count($columns) - 1)) {
-    //             $sql = $sql . ",";
-    //         }
-    //     }
-    //     $sql = $sql . " FROM " . $this->name . '.' . $table . " WHERE  RegNo ='" . $regNo . "'";
-    //     try {
-    //         $stmt = $this->pdo->prepare($sql);
-    //         $stmt->execute();
-    //         $result = $stmt->fetchAll();
-    //     } catch (PDOException $e) {
-    //         echo $e->getMessage();
-    //     }
-    //     return $result;
-    // }
+
 
     function retrieveData($table, $columns, $regNo)
     {
