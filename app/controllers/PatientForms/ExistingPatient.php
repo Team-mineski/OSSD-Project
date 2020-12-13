@@ -39,7 +39,6 @@ if (!(isset($_SESSION))) {
             $class_name = ucfirst($test);
             $command = new $class_name;
             $command->execute($medical, array($_SESSION["regNo"], date('Y-m-d')));
-            //$medical->enterData($test, array('patient_id','sdate'), array($_SESSION["regNo"], date('Y-m-d')));
           }
         }
       }
