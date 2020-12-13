@@ -102,7 +102,7 @@ $patient = $_SESSION["Patient"];
                   <input type=\"radio\" onclick=\"javascript:yesnoCheck();\" name=\"admitted\" id=\"noCheck\" value='false' checked> No<br>
                   <div class=\"col-md-2 mb-3 col-md-offset-4\">
                     <div id=\"ifYes\" style=\"visibility:hidden\">
-                      Bed Number: <input type=\"text\" class=\"form-control\" id=\"bed\" value =$bed name=\"bed\" autocomplete=\"off\">
+                      Bed Number: <input type=\"text\" class=\"form-control\" id=\"bed\" value ='$bed' name=\"bed\" autocomplete=\"off\">
                     </div>
                   </div>
                   
@@ -113,7 +113,7 @@ $patient = $_SESSION["Patient"];
                   <input type=\"radio\" onclick=\"javascript:yesnoCheck();\" name=\"admitted\" id=\"yesCheck\" name=\"admitted\" id=\"noCheck\" value='false' > No<br>
                   <div class=\"col-md-2 mb-3 col-md-offset-4\">
                     <div id=\"ifYes\" style=\"visibility:visible\">
-                      Bed Number: <input type=\"text\" class=\"form-control\" value =$bed id=\"bed\" name=\"bed\" autocomplete=\"off\">
+                      Bed Number: <input type=\"text\" class=\"form-control\" value ='$bed' id=\"bed\" name=\"bed\" autocomplete=\"off\">
                     </div>
                   </div>
                   ";

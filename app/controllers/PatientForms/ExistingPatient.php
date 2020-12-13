@@ -64,6 +64,7 @@ if (!(isset($_SESSION))) {
     $results =  $medical->joinPatientWithDiagnosis("patients", $columns, "PatientID", $patientID);
 
     if ($results) {
+      print_r($results);
       $regNo = $results['RegNo'];
       $diagnosis =  $results['Disease'];
       $name = $results['FullName'];
@@ -87,7 +88,7 @@ if (!(isset($_SESSION))) {
 
       $contact = $results['ContactNo'];
       $bedNo = $results['BedNo'];
-      if ($bedNo === '') {
+      if ($bedNo == '') {
         $admission = "Not admitted";
       } else {
         $admission = "Admitted";
