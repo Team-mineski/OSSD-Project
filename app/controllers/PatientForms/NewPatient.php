@@ -29,7 +29,6 @@ if (isset($_POST['regNo'])) {
 
   try {
     $regNo = Validation::str(trim(htmlspecialchars($_POST['regNo'])));
-    //$_SESSION["regNo"] = $regNo;
   } catch (Exception $e) {
     array_push($errors, "Registration number incorrectly entered");
   }
@@ -87,7 +86,7 @@ if (isset($_POST['dob'])) {
 
 if (isset($_POST['admitted'])) {
   $status = $_POST['admitted'];
-  if ($status == true) {
+  if ($status === 'true') {
     $status = "Admitted";
     if (isset($_POST['bed'])) {
       $bed = trim(htmlspecialchars($_POST['bed']));

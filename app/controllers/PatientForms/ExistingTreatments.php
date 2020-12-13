@@ -2,6 +2,7 @@
 include '../../views/layouts/docmenu.php';
 // include '../../views/HeaderAndFooter/header.php';
 include '../../models/DatabaseConnection/Database.php';
+include '../../classes/Patient.php';
 
 if (!(isset($_SESSION))) {
   session_start();
@@ -45,6 +46,9 @@ if (!(isset($_SESSION))) {
         $columns = array('RegNo', 'Date', 'ClinicalSignsPresented', 'PrescribedDrugs', "AdditionalNotes");
         if (isset($_SESSION["regNo"])) {
           $regNo = $_SESSION["regNo"];
+        } else {
+          $patient = $_SESSION["Patient"];
+          $regNo = $patient->getRegNo();
         }
 
         if (isset($_SESSION['error'])) {
@@ -57,15 +61,10 @@ if (!(isset($_SESSION))) {
           $medicine = htmlspecialchars($_POST["medicine"]);
           $signs = htmlspecialchars($_POST["signs"]);
           $notes = htmlspecialchars($_POST["notes"]);
-          if ((strlen($medicine) < 1) & (strlen($signs) < 1) & (strlen($notes) < 1)) {
-            $_SESSION['error'] = "Cannot submit a completely empty form";
-            header("Location: ExistingTreatments.php");
-            return;
-          }
           $medical->enterData("history", $columns, array($regNo, date('Y-m-d'), $signs, $medicine, $notes));
           header("Location: ExistingPatient.php");
+          return;
         }
-
         $results =  $medical->retrieveData("history", $columns, $regNo);
 
         if (sizeof($results) != 0) {
@@ -95,11 +94,27 @@ if (!(isset($_SESSION))) {
       </tbody>
     </table>
     <div style="text-align:center">
-      <input type="submit" class=" btn btn-outline-success" name="treatment_submit" id="treatment_submit" />
+      <button class="btn btn-outline-success mr-4" onclick="return empty()">Submit</button>
     </div>
     </form>
     <br>
   </div>
+  <script>
+    function empty() {
+      var signs;
+      signs = document.getElementById("signs").value;
+      var medicine;
+      medicine = document.getElementById("signs").value;
+      var notes;
+      notes = document.getElementById("signs").value;
+      if ((signs == "") && (medicine == "") && (notes == "")) {
+        window.alert("Cannot submit a completely empty form");
+        return false;
+      }
+    }
+  </script>
 </body>
+
+
 
 </html>

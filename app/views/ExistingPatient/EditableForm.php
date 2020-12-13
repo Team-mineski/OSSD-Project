@@ -97,28 +97,35 @@ $patient = $_SESSION["Patient"];
         <div class="col-sm-12">
           <legend class="col-form-label col-sm-2 pt-0">Admitted </legend>
           <?php if ($patient->getAdmissionStatus() == "Not admitted") {
+            $bed= $patient->getBedNo();
             echo " <input type=\"radio\" onclick=\"javascript:yesnoCheck();\" name=\"admitted\" id=\"yesCheck\" value = 'true'>  Yes<br>
-                  <input type=\"radio\" onclick=\"javascript:yesnoCheck();\" name=\"admitted\" id=\"noCheck\" value='false' checked> No<br>";
+                  <input type=\"radio\" onclick=\"javascript:yesnoCheck();\" name=\"admitted\" id=\"noCheck\" value='false' checked> No<br>
+                  <div class=\"col-md-2 mb-3 col-md-offset-4\">
+                    <div id=\"ifYes\" style=\"visibility:hidden\">
+                      Bed Number: <input type=\"text\" class=\"form-control\" id=\"bed\" value ='$bed' name=\"bed\" autocomplete=\"off\">
+                    </div>
+                  </div>
+                  
+          ";
           } else {
+            $bed = $patient->getBedNo();
             echo " <input type=\"radio\" onclick=\"javascript:yesnoCheck();\" name=\"admitted\" id=\"yesCheck\" value = 'true' checked>  Yes<br>
-                  <input type=\"radio\" onclick=\"javascript:yesnoCheck();\" name=\"admitted\" id=\"noCheck\" value='false' > No<br>";
+                  <input type=\"radio\" onclick=\"javascript:yesnoCheck();\" name=\"admitted\" id=\"yesCheck\" name=\"admitted\" id=\"noCheck\" value='false' > No<br>
+                  <div class=\"col-md-2 mb-3 col-md-offset-4\">
+                    <div id=\"ifYes\" style=\"visibility:visible\">
+                      Bed Number: <input type=\"text\" class=\"form-control\" value ='$bed' id=\"bed\" name=\"bed\" autocomplete=\"off\">
+                    </div>
+                  </div>
+                  ";
           }
           ?>
-          <div class="col-md-2 mb-3 col-md-offset-4">
-            <div id="ifYes" style="visibility:hidden">
-              Bed Number: <input type="text" class="form-control" id="bed" name="bed" autocomplete="off">
-            </div>
-          </div>
-        </div>
 
         <div class="form-row">
           <button type="submit" name="test" class="btn btn-outline-success"> Confirm </button>
         </div>
-
     </form>
   </div>
 </body>
-
 </html>
 
 <script>
