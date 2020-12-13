@@ -111,7 +111,7 @@ $patient = $_SESSION['Patient'];
       </div>
       <div class="form-row">
         <form action="DischargedPatientTestResults.php" method="">
-          <input class="btn btn-outline-success mr-4" type="submit" name="tests" value="Test Results" />
+          <!-- <input class="btn btn-outline-success mr-4" type="submit" name="tests" value="Test Results" /> -->
         </form>
 
         <form action="DischargedPatientHistory.php" method="">

@@ -48,9 +48,13 @@ if (!(isset($_SESSION))) {
     if (isset($_POST['regNo'])) {
       $regNo = $_POST["regNo"];
       $_SESSION["regNo"] = $_POST['regNo'];
-      //echo $regNo;
-    } else if (isset($_SESSION['regNo'])) {
+    } 
+    else if (isset($_SESSION['regNo'])) {
       $regNo = $_SESSION["regNo"];
+    } 
+    else {
+      $patient = $_SESSION["Patient"];
+      $regNo = $patient->getRegNo();
     }
 
     $arr = explode("/", $regNo);  //get the patient id from the registration number
@@ -58,7 +62,7 @@ if (!(isset($_SESSION))) {
     $_SESSION["PatientID"] = $patientID;
     $columns = array('RegNo', 'FullName', 'Gender', 'FullAddress', 'DateOfBirth', 'Disease',  'BedNo', 'ContactNo');
     $results =  $medical->joinPatientWithDiagnosis("patients", $columns, "PatientID", $patientID);
-    print_r($results);
+
     if ($results) {
       $regNo = $results['RegNo'];
       $diagnosis =  $results['Disease'];
@@ -83,19 +87,18 @@ if (!(isset($_SESSION))) {
 
       $contact = $results['ContactNo'];
       $bedNo = $results['BedNo'];
-      if ($bedNo == '') {
+      if ($bedNo === '') {
         $admission = "Not admitted";
       } else {
         $admission = "Admitted";
       }
 
       $patient = new Patient($regNo, $name, $age, $address, $diagnosis, $dob, $gender, $admission, $bedNo, $contact, "Existing");
-      if (isset($_SESSION["Patient"])) {
-        unset($_SESSION['Patient']);
-      }
+      
       $_SESSION["Patient"] = $patient;
       $patient->displayUI();
-    } else {
+    } 
+    else {
       $_SESSION['error'] = "Registration number not found";
       header("Location: ../../views/Searching.php");
       return;
