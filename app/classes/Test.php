@@ -38,7 +38,6 @@ class Ecg_request_table extends TestCommand
 class Specimen_exam_request_table extends TestCommand
 {
 
-
     public function execute($medical, $data)
     {
         $medical->enterData("specimen_exam_request_table", array('regNo', 'date'), $data);
