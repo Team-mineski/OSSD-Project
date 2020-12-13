@@ -43,10 +43,6 @@ if (!(isset($_SESSION))) {
   $diagnosis = $patient->getDiagnosis();
   $contact = $patient->getContact();
   $bedNo = $patient->getBedNo();
-  if (isset($_SESSION["Patient"])) {
-    unset($_SESSION["Patient"]);
-    unset($_SESSION["regNo"]);
-  }
   $patient->goNext();
 
   $diagnosis = $medical->getDiagnosisID($diagnosis);

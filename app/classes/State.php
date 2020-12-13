@@ -62,15 +62,7 @@ class DischargedPatient extends State
 
     public function displayUI($patient)
     {
-        $regNo = $patient->getRegNo();
-        $name = $patient->getName();
-        $age = $patient->getAge();
-        $gender = $patient->getGender();
-        $address = $patient->getAddress();
-        $dob = $patient->getDOB();
-        $diagnosis = $patient->getDiagnosis();
-        $contact = $patient->getContact();
-        $bedNo = $patient->getBedNo();
+        
         header("Location: ../../views/DischargedPatient/DischargedPatientForm.php");
         return;
     }
