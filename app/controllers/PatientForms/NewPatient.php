@@ -29,7 +29,6 @@ if (isset($_POST['regNo'])) {
 
   try {
     $regNo = Validation::str(trim(htmlspecialchars($_POST['regNo'])));
-    //$_SESSION["regNo"] = $regNo;
   } catch (Exception $e) {
     array_push($errors, "Registration number incorrectly entered");
   }

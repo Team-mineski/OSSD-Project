@@ -52,8 +52,9 @@ if ($bed == '') {
   $bed = '';
 } else {
   $admission = "Admitted";
-  $_SESSION["admission"] = $admission;
+  
 }
+$_SESSION["admission"] = $admission;
 $patient->setBed($bed);
 $patient->setDiagnosis($disease);
 $patient->setContact($contact);
