@@ -13,7 +13,11 @@ class Model
     $this->_table = $table;
     $this->_setTableColumns();
     $this->_modelName = str_replace(' ', '', ucwords(str_replace('_',' ', $this->_table)));
-    // example user_session; -> user session -> UserSession
+
+
+    // example user_session; -> 
+    //user session ->
+    // UserSession
   }
 
   protected function _setTableColumns()
