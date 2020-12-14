@@ -132,10 +132,10 @@ if (isset($_POST["submit"])) {
         }
       }
     }
-    echo $diagnosisID;
 
     $patient = new Patient($regNo, $name, $age, $address, $diagnosis, $dob, $gender, $status, $bed, $contact, "New");
     $_SESSION["Patient"] = $patient;
+    $_SESSION["regNo"] = $regNo;
     $error = $medical->enterData(
       "patients",
       array(
