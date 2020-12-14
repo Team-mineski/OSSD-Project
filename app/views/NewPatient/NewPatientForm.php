@@ -119,13 +119,6 @@ if (!(isset($_SESSION))) {
       </div>
 
       <div class="form-row">
-
-        <!-- <div class="col-md-2 mb-3 col-md-offset-4">
-              <label for="dob" class ="textStyle">Date of Birth</label>
-              <input type="date" class="form-control boxstyles" id="dob" name="dob"  autocomplete="off" required>
-          </div> -->
-
-        <!-- <div class="ml-5"> -->
         <div class="col-md-3" style="margin-bottom: 20px;">
           <legend class="col-form-label col-sm-5 pt-0 textStyle">Gender *</legend>
 

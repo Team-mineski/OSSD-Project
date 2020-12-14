@@ -1,5 +1,6 @@
 <?php
 include '../../models/DatabaseConnection/Database.php';
+include '../../classes/Patient.php';
 
 if (!(isset($_SESSION))) {
     session_start();
