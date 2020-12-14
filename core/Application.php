@@ -1,8 +1,6 @@
 <?php
 
-/**
- *
- */
+
 class Application
 {
 
@@ -15,7 +13,7 @@ class Application
   private function _set_reporting(){
     if(DEBUG){
       error_reporting(E_ALL);
-      ini_set('display_errors', 1); // 0 --> False
+      ini_set('display_errors', 1); // 0 --> not true
     }else{
       error_reporting(0);
       ini_set('display_errors', 0);

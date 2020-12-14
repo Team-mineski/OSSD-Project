@@ -15,8 +15,8 @@ class View
 
   public function render($viewName){
 
-    $viewAry = explode('/' , $viewName); // explode means split
-    $viewString = implode(DS , $viewAry); // implode means join
+    $viewAry = explode('/' , $viewName); // explode means split to view
+    $viewString = implode(DS , $viewAry); // implode means join in php
     
     if (file_exists(ROOT . DS . 'app'. DS. 'views' . DS . $viewString . '.php')) {
       include(ROOT . DS .'app'. DS. 'views' . DS . $viewString . '.php');
