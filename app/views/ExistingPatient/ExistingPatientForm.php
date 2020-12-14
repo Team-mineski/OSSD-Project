@@ -119,7 +119,7 @@ if (isset($_SESSION["Patient"])) {
 
     </form>
     <div class="form-row printvisible">
-      <form action="../../controllers/PatientForms/ExistingTreatments.php" method=post>
+      <form action="../../controllers/PatientForms/ExistingTreatmentSubmit.php" method=post>
 
         <button class="btn btn-outline-success mr-4" type="submit" name="treatment"> History </button>
       </form>

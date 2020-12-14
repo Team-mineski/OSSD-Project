@@ -62,7 +62,7 @@ if (!(isset($_SESSION))) {
     $results =  $medical->joinPatientWithDiagnosis("patients", $columns, "PatientID", $patientID);
 
     if ($results) {
-      print_r($results);
+      // print_r($results);
       $regNo = $results['RegNo'];
       $diagnosis =  $results['Disease'];
       $name = $results['FullName'];
