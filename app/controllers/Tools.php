@@ -11,6 +11,7 @@ class Tools extends Controller
   {
     parent::__construct($controller, $action);
     $this->view->setLayout('default');
+    $this->load_model('Users');
   }
 
   public function indexAction()
@@ -60,13 +61,21 @@ class Tools extends Controller
       $m = new Model('users');
 
       $user = $m->_db->findFirst('users', ['conditions' => ['username = ?', ' acl = ?'], 'bind' => [$_POST['username'], $_POST['acl']]]);
-      if ($user) {
+      if(currentUser()->username == $_POST['username']){
+        $posted_values['message'] =
+          '<div class="alert alert-warning w-50 deletepagepopups" role="alert">
+        You cannot delete your admin account.
+          </div>';
+      }
+      else if ($user) {
+
+
         $posted_values['fname'] = $user->fname;
         $posted_values['lname'] = $user->lname;
         $posted_values['email'] = $user->email;
         $posted_values['acl'] = $user->acl;
         $posted_values['username'] = $_POST['username'];
-
+        
         $posted_values['smessage'] = '<div class="alert alert-success w-50 deletepagesuceespopup" role="alert">
           The user exists. Please check user details below before you delete the account.
             </div>';
