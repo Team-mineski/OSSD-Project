@@ -289,11 +289,11 @@ if ($results) {
             </p>
         </div>
         <div class="form-group">
-            <textarea name="labnote" id="" cols="" rows="10" class="form-control form-control-sm" readonly><?php echo $lab_note; ?></textarea>
+            <textarea name="labnote" id="" cols="" rows="10" class="form-control form-control-sm" readonly>'<?php echo $lab_note; ?>'</textarea>
         </div>
 
         <div class="form-group w-25">
-            <input type="text" name="sign" class="form-control form-control-sm " placeholder="SIGNATURE " readonly value=<?php echo $lab_sig; ?>>
+            <input type="text" name="sign" class="form-control form-control-sm " placeholder="SIGNATURE" readonly value='<?php echo $lab_sig; ?>'>
         </div>
         <hr class="newhr">
 
@@ -303,7 +303,7 @@ if ($results) {
         <div class="main-form">
             <div class="form-group   ">
                 <label for="repspec">Report on Specimen: </label>
-                <input type="text" name="repspec" id="repspec" class="form-control form-control-sm " readonly value=<?php echo $report; ?>>
+                <textarea name="labnote" id="" cols="" rows="10" class="form-control form-control-sm" readonly><?php echo $report; ?></textarea>
             </div>
 
             <hr class="newhr">
@@ -312,7 +312,7 @@ if ($results) {
                 <div class="col">
                     <div class="form-group ">
                         <label for="repcheck">Report checked by: </label>
-                        <input type="text" name="repcheck" id="repcheck" class="form-control form-control-sm " readonly value=<?php echo $report_check; ?>>
+                        <input type="text" name="repcheck" id="repcheck" class="form-control form-control-sm " readonly value='<?php echo $report_check; ?>'>
                     </div>
 
                 </div>
@@ -320,7 +320,7 @@ if ($results) {
                 <div class="col">
                     <div class="form-group ">
                         <label for="senton">Sent on: </label>
-                        <input type="date" name="senton" id="senton" class="form-control form-control-sm " readonly value=<?php echo $sentdate; ?>>
+                        <input type="date" name="senton" id="senton" class="form-control form-control-sm " readonly value='<?php echo $sentdate; ?>'>
                     </div>
 
                 </div>

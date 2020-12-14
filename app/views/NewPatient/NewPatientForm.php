@@ -64,7 +64,7 @@ if (!(isset($_SESSION))) {
 
 
         <div class="col-md-3 mb-3 col-md-offset-4 mr-3">
-          <label for="regNo" class="textStyle">Registration Number</label>
+          <label for="regNo" class="textStyle">Registration Number *</label>
           <input type="text" class="form-control boxstyles" id="regNo" name="regNo" placeholder="Registration Number" autocomplete="off" value=<?php echo date('Y') . '/' . ($lastRegNo + 1) ?> readonly>
         </div>
 
@@ -73,7 +73,7 @@ if (!(isset($_SESSION))) {
       <div class="form-row">
 
         <div class="col-md-6 mb-3 col-md-offset-2">
-          <label for="name" class="textStyle">Full Name</label>
+          <label for="name" class="textStyle">Full Name *</label>
           <input type="text" class="form-control boxstyles" id="name" name="name" placeholder="Full Name" autocomplete="off" required>
         </div>
         <!--
@@ -85,7 +85,7 @@ if (!(isset($_SESSION))) {
           </div>-->
         <div class="ml-5">
           <div class="col-md-12 mb-3 col-md-offset-4">
-            <label for="dob" class="textStyle">Date of Birth</label>
+            <label for="dob" class="textStyle">Date of Birth *</label>
             <input type="date" class="form-control boxstyles" id="dob" name="dob" max=<?php echo date('Y-m-d'); ?> autocomplete="off" required>
           </div>
         </div>
@@ -95,7 +95,7 @@ if (!(isset($_SESSION))) {
       <div class="form-row">
 
         <div class="col-md-6 mb-3 col-md-offset-4">
-          <label for="diagnosis" class="textStyle">Diagnosis</label>
+          <label for="diagnosis" class="textStyle">Diagnosis *</label>
           <input type="text" class="form-control boxstyles" id="diagnosis" name="diagnosis" placeholder="Diagnosis" autocomplete="off" required>
         </div>
 
@@ -105,13 +105,13 @@ if (!(isset($_SESSION))) {
       <div class="form-row">
 
         <div class="col-md-6 mb-3 col-md-offset-4">
-          <label for="address" class="textStyle">Full Address</label>
+          <label for="address" class="textStyle">Full Address *</label>
           <input type="text" class="form-control boxstyles" id="address" name="address" placeholder="Full Address" autocomplete="off" required>
         </div>
 
         <div class="ml-5">
           <div class="col-md-10 mb-3 col-md-offset-4">
-            <label for="address" class="textStyle">Contact No.</label>
+            <label for="address" class="textStyle">Contact No. *</label>
             <input type="tel" class="form-control boxstyles" id="contact" name="contact" placeholder="Contact Number" autocomplete="off" required minlength="10" maxlength="12">
           </div>
         </div>
@@ -127,7 +127,7 @@ if (!(isset($_SESSION))) {
 
         <!-- <div class="ml-5"> -->
         <div class="col-md-3" style="margin-bottom: 20px;">
-          <legend class="col-form-label col-sm-2 pt-0 textStyle">Gender</legend>
+          <legend class="col-form-label col-sm-5 pt-0 textStyle">Gender *</legend>
 
           <input type="radio" name="gender" value="Male" required> <span class="textStyle">Male</span> <br>
           <input type="radio" name="gender" class="textStyle" value="Female"> <span class="textStyle">Female</span>
@@ -136,7 +136,7 @@ if (!(isset($_SESSION))) {
 
         <!-- <div class="ml-5"> -->
         <div class="col-md-3">
-          <legend class="col-form-label col-sm-2 pt-0 textStyle" required>Admitted </legend>
+          <legend class="col-form-label col-sm-5 pt-0 textStyle" required>Admitted *</legend>
           <input type="radio" onclick="javascript:yesnoCheck();" name="admitted" id="yesCheck" value='true' required> <span class="textStyle">Yes</span><br>
           <input type="radio" onclick="javascript:yesnoCheck();" name="admitted" id="noCheck" value='false'> <span class="textStyle">No</span><br>
           <div id="ifYes" style="visibility:hidden" class="textStyle ">
