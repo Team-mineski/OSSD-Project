@@ -9,7 +9,7 @@
     <h3 class="textStyle top">DELETE MEMBER!</h3>
     <form class="form" action="" method="post">
       <div class="form-group">
-        <label class="badge badge-danger">Attention! You are going to delete a member form the system</label>
+        <label class="badge badge-danger">Attention! You are going to delete a member from the system</label>
       </div>
 
       <div class="input-group mb-3 w-50">

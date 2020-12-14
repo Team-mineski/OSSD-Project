@@ -1,4 +1,3 @@
-
 <?php
 
 /**
@@ -95,6 +94,3 @@ class Tools extends Controller
     $this->view->render('tools/delete');
   }
 }
-
-
-?>
