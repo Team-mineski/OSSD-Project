@@ -44,7 +44,7 @@ if (!(isset($_SESSION))) {
 <body class="mainbody">
 
   <div class="container">
-    <span> * : Required Fields </span>
+    <span class='textStyle'> *  Required Fields </span>
     <br>
     <?php
     $medical = Database::getInstance();
